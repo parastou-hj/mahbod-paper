@@ -125,4 +125,41 @@ $(document).ready(function() {
     }
   });
 });
+// Advanced Mega Menu with Touch Support
+$(document).ready(function() {
+    // Handle mobile touch for mega menu
+    if (window.innerWidth <= 992) {
+        $('.has-mega-advanced > .nav-link').on('click', function(e) {
+            e.preventDefault();
+            $(this).parent().toggleClass('mobile-active');
+        });
+        
+        $('.mega-list > li.has-submenu > a').on('click', function(e) {
+            e.preventDefault();
+            $(this).parent().toggleClass('submenu-active');
+        });
+    }
+    
+    // Close mega menu when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.has-mega-advanced').length) {
+            $('.has-mega-advanced').removeClass('mobile-active');
+            $('.has-submenu').removeClass('submenu-active');
+        }
+    });
+    
+    // Add smooth scroll animation for submenu items
+    $('.mega-submenu a').hover(
+        function() {
+            $(this).stop().animate({
+                paddingRight: '22px'
+            }, 200);
+        },
+        function() {
+            $(this).stop().animate({
+                paddingRight: '18px'
+            }, 200);
+        }
+    );
+});
  
