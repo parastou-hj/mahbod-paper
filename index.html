@@ -11,13 +11,15 @@
     <title>مهبد کاغذ</title>
 </head>
 <body>
-     <header>
+      <header class="neon-header">
         <div class="container-fluid p-0 header-container">
-            <div class="row col-xl-11 header-top py-lg-2 px-lg-2" >
-
-                <div class="col user-cart d-flex align-items-center">
-                     <div class="cart me-2">
-                        <img src="./images/cart.png" alt="" class="cart-img">
+           <div class="row col-xl-11 header-top py-lg-2 px-lg-2 align-items-center">
+                <div class="col user-cart d-flex align-items-center justify-content-end gap-3">
+                    <div class="cart me-2 header-action">
+                        <div class="cart-pill">
+                            <img src="./images/cart.png" alt="" class="cart-img">
+                            <span class="cart-label">خرید</span>
+                        </div>
                         <div class="cart-badge">
                             <span>0</span>
                         </div>
@@ -161,64 +163,81 @@
                     </div> 
                 </div>
             </div>
-             <div class=" header-down container-fluid p-0">
-                <div class="row col-xl-11">
-                    <div class="col-lg-2">
+          <div class="row col-xl-11 header-down py-lg-2 px-lg-2 align-items-center">
+                <div class="col user-cart d-flex align-items-center justify-content-end gap-3">
+                    <div class=" me-2 header-action">
+                       
                         <a href="" class="logo">
                             <img src="/images/logo.png" alt="">
                         </a>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="nav">
-                            <ul>
-                               <li>
-                                <a href=""> 
-                                    صفحه اصلی
-                                </a>
-                               </li>
-                                <li>
-                                <a href=""> 
-                                     محصولات
-                                </a>
-                               </li>
-                               <li>
-                                <a href=""> 
-                                     درباره ما
-                                </a>
-                               </li>
-                               
-                                <li>
-                                <a href=""> 
-                                     خدمات
-                                </a>
-                               </li>
-                                <li>
-                                <a href=""> 
-                                     فرصت های شغلی
-                                </a>
-                               </li>
-                                <li>
-                                <a href=""> 
-                                    تماس با ما 
-                                </a>
-                               </li>
-
+                    <div class="col-lg-8 d-flex align-items-center nav-middle">
+                        <nav class="primary-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item"><a href="" class="nav-link">صفحه اصلی</a></li>
+                                <li class="nav-item has-mega">
+                                    <a href="" class="nav-link">محصولات</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-inner">
+                                            <div class="mega-column">
+                                                <h4>کاغذ و مقوا</h4>
+                                                <ul>
+                                                    <li><a href="">کاغذ تحریر</a></li>
+                                                    <li><a href="">مقوای ضخیم</a></li>
+                                                    <li><a href="">کاغذ بسته بندی</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-column">
+                                                <h4>ماشین آلات</h4>
+                                                <ul>
+                                                    <li><a href="">دستگاه چاپ</a></li>
+                                                    <li><a href="">پرس وکیوم</a></li>
+                                                    <li><a href="">خط بسته بندی</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-column">
+                                                <h4>مواد مصرفی</h4>
+                                                <ul>
+                                                    <li><a href="">چسب و رزین</a></li>
+                                                    <li><a href="">رول حرارتی</a></li>
+                                                    <li><a href="">روغن و روانکار</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item has-dropdown">
+                                    <a href="" class="nav-link">درباره ما</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="">تاریخچه مهبد</a></li>
+                                        <li><a href="">تیم ما</a></li>
+                                        <li><a href="">مسئولیت اجتماعی</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="" class="nav-link">خدمات</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">فرصت های شغلی</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">تماس با ما</a></li>
                             </ul>
+                        </nav>
+                        <div class="nav-search">
+                            <button class="search-toggle" aria-label="جستجو">
+                                <img src="/images/search.png" alt="">
+                            </button>
+                            <div class="search-box">
+                                <input type="text" placeholder="چی میخوای پیدا کنی؟">
+                                <button type="button" class="search-submit"><i class="fa fa-search"></i></button>
+                            </div>
                         </div>
-                        <img src="/images/search.png" alt="">
+                       
                     </div>
-                    <div class="col-lg-2">
-                        <button>
-                            <a href=""> فروشگاه</a>
-                        </button>
+                    <div class="col-lg-2 d-flex justify-content-start">
+                        <a class="store-btn" href="">فروشگاه</a>
                     </div>
 
                
                 </div>
             </div>
-
-            </div>
-           
+ 
         </div>
     </header>
     <main class="body-content">
