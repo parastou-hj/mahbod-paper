@@ -124,8 +124,7 @@ $(document).ready(function() {
       }
     }
   });
-});
-  const $creativitySection = $('.creativity');
+   const $creativitySection = $('.creativity');
   if ($creativitySection.length) {
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries, obs) => {
@@ -136,7 +135,8 @@ $(document).ready(function() {
           }
         });
       }, {
-        threshold: 0.1
+        threshold: 0.6,
+        rootMargin: '0px 0px -10% 0px'
       });
 
       observer.observe($creativitySection[0]);
@@ -144,6 +144,8 @@ $(document).ready(function() {
       $creativitySection.addClass('is-visible');
     }
   }
+});
+  
 // Advanced Mega Menu with Touch Support
 $(document).ready(function() {
     // Handle mobile touch for mega menu
