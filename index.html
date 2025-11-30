@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>مهبد کاغذ</title>
+</head>
+<body>
+     <header>
+        <div class="container-fluid p-0 header-container">
+            <div class="row col-xl-11 header-top py-lg-2 px-lg-2" >
+
+                <div class="col user-cart d-flex align-items-center">
+                     <div class="cart me-2">
+                        <img src="./images/cart.png" alt="" class="cart-img">
+                        <div class="cart-badge">
+                            <span>0</span>
+                        </div>
+                         <div class="cart-submenu">
+                            <div class="cart-header">
+                                <h3 class="cart-title">سبد خرید شما</h3>
+                                <span class="cart-items-count">2 محصول</span>
+                            </div>
+                            
+                            <div class="cart-items">
+                                <div class="cart-item">
+                                    <div class="cart-item-image">
+                                        <!-- <img src="./images/p-book.png" > -->
+                                    </div>
+                                    <div class="cart-item-details">
+                                        <h4 class="cart-item-title"> کتاب آشنایی آماری</h4>
+                                        <div class="cart-item-price">
+                                            <span class="item-quantity">1 ×</span>
+                                            <span class="item-price">255,000</span>
+                                            <span class="price-currency">تومان</span>
+                                        </div>
+                                    </div>
+                                    <button class="remove-item-btn">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </div>
+                                  <div class="cart-item">
+                                    <div class="cart-item-image">
+                                        <!-- <img src="./images/p-book.png" > -->
+                                    </div>
+                                    <div class="cart-item-details">
+                                        <h4 class="cart-item-title"> کتاب آشنایی آماری</h4>
+                                        <div class="cart-item-price">
+                                            <span class="item-quantity">1 ×</span>
+                                            <span class="item-price">255,000</span>
+                                            <span class="price-currency">تومان</span>
+                                        </div>
+                                    </div>
+                                    <button class="remove-item-btn">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            
+                            <div class="cart-footer">
+                                <div class="cart-total">
+                                    <span class="total-label">مجموع:</span>
+                                    <div class="total-amount">
+                                        <span class="amount">600,000</span>
+                                        <span class="currency">تومان</span>
+                                    </div>
+                                </div>
+                                <div class="cart-actions">
+                                    <a href="#" class="view-cart-btn">مشاهده سبد خرید</a>
+                                    <a href="#" class="checkout-btn">تسویه حساب</a>
+                                </div>
+                            </div>
+                            
+                            
+                          
+                        </div>
+                        <!-- empty-cart -->
+                          <div class="empty-cart" style="display: none;">
+                                <div class="empty-cart-icon">
+                                    <i class="fa fa-shopping-basket"></i>
+                                </div>
+                                <p class="empty-cart-message">سبد خرید شما خالی است</p>
+                             
+                            </div>
+    
+                    </div>
+                    <div class="user">
+                        <div class="user-btn">
+                             <img src="./images/user.png" alt="">
+                        </div>
+                          <div class="user-submenu">
+                            <div class="user-view"  >
+                                <div class="user-submenu-header">
+                                    <div class="user-avatar">
+                                        <img src="./images/user.png" alt="عکس کاربر">
+                                    </div>
+                                    <div class="user-info">
+                                        <span class="user-name">علی محمدی</span>
+                                        <span class="user-email">ali@example.com</span>
+                                    </div>
+                                </div>
+                                <ul class="user-menu-list">
+                                    <li class="user-menu-item">
+                                        <a href="#">
+                                            <i class="fa fa-user"></i>
+                                            <span>پروفایل من</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="#">
+                                            <i class="fa fa-shopping-bag"></i>
+                                            <span>سفارش‌های من</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                            <span>علاقه‌مندی‌ها</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="user-menu-item logout">
+                                        <a href="#">
+                                            <i class="fa fa-sign-out"></i>
+                                            <span>خروج از حساب کاربری</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                           
+                             
+
+                            <!-- login-required-state -->
+                             <div class="login-required-state" style="display: none;">
+        
+                                <h3 class="login-title">ورود به حساب کاربری</h3>
+                                <p class="login-description">برای دسترسی به امکانات حساب کاربری، لطفاً وارد شوید.</p>
+                                
+                                <div class="login-actions">
+                                    <a href="#" class="login-primary-btn">
+                                        <i class="fa fa-sign-in-alt"></i>
+                                        <span>ورود</span>
+                                    </a>
+                                    <a href="#" class="register-secondary-btn">
+                                        <i class="fa fa-user-plus"></i>
+                                        <span>ثبت نام</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div> 
+                </div>
+            </div>
+             <div class=" header-down container-fluid p-0">
+                <div class="row col-xl-11">
+                    <div class="col-lg-2">
+                        <a href="" class="logo">
+                            <img src="/images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="nav">
+                            <ul>
+                               <li>
+                                <a href=""> 
+                                    صفحه اصلی
+                                </a>
+                               </li>
+                                <li>
+                                <a href=""> 
+                                     محصولات
+                                </a>
+                               </li>
+                               <li>
+                                <a href=""> 
+                                     درباره ما
+                                </a>
+                               </li>
+                               
+                                <li>
+                                <a href=""> 
+                                     خدمات
+                                </a>
+                               </li>
+                                <li>
+                                <a href=""> 
+                                     فرصت های شغلی
+                                </a>
+                               </li>
+                                <li>
+                                <a href=""> 
+                                    تماس با ما 
+                                </a>
+                               </li>
+
+                            </ul>
+                        </div>
+                        <img src="/images/search.png" alt="">
+                    </div>
+                    <div class="col-lg-2">
+                        <button>
+                            <a href=""> فروشگاه</a>
+                        </button>
+                    </div>
+
+               
+                </div>
+            </div>
+
+            </div>
+           
+        </div>
+    </header>
+    <main class="body-content">
+       <section class="slider position-relative">
+       <div class="owl-carousel owl-theme slider-owl px-0">
+                <div class="baner-item position-relative">
+                   <a href="">
+                     <img src="/images/slider-back.png" alt="" class="slider-back">
+                     <div class="slider-shapes">
+                        <div class="n1">
+                            <img src="/images/slider-shap1.png" alt="">
+                        </div>
+                         <div class="n2">
+                            <img src="/images/slider-shap2.png" alt="">
+                        </div>
+                         <div class="n3">
+                            <img src="/images/slider-shap3.png" alt="">
+                        </div>
+                         <div class="n4">
+                            <img src="/images/slider-shap4.png" alt="">
+                        </div>
+                     </div>
+                     <div class="baner-txt">
+                        <h1>
+                            From Paper  to Reality...
+                        </h1>
+                        <h2>
+                            Screen printing technology brings new ideas to manufacturing
+                        </h2>
+                        <button>فروشگاه</button>
+                     </div>
+                   </a>
+                </div>
+                 
+             </div>
+        <img src="/images/down-flesh.png" alt="" class="flesh">
+       </section>
+       <section class="container-fluid creativity py-5">
+        <div class="row col-xl-11 py-5 ps-5">
+            <div class="col-12">
+                <h1>
+                    from paper to masterpice! 
+                </h1>
+            </div>
+            <div class="col-lg-6 cre-txt">
+                <h1>هر خلاقیتی با یک کاغذ سفید شروع میشه</h1>
+                <p>
+لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است                 </p>
+                <p class="text-mute">
+برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود
+                </p>
+                <a href="" class="d-flex">
+                    بیشتر بخوانید
+                    <div class="more-btn">
+                        <img src="/images/more.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 position-relative py-5 ">
+                <div class="anim-img  ">
+                    <img src="/images/anim1.png" alt="" class="anim1">
+                    <img src="/images/anim2.png" alt="" class="anim2">
+                    <img src="/images/anim3.png" alt="" class="anim3">
+                    <img src="/images/anim4.png" alt="" class="anim4">
+                    <img src="/images/anim5.png" alt="" class="anim5">
+                    <img src="/images/anim6.png" alt="" class="anim6">
+                </div>
+            </div>
+        </div>
+       </section>
+       <section class="category container-fluid py-5 px-0 position-relative">
+        <img src="/images/cat-shap.png" alt="" class="cat-shape">
+        <div class="row col-xl-11 d-flex ">
+          <div class="d-flex justify-content-center">
+              <div class="cat-col position-relative">
+          <a href="">
+              <img src="/images/cat1.png" alt="" class="cat-back">
+            <div class="cat-content">
+                <img src="/images/cat-img.png" alt="">
+                <h1>مقوا</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>لورم ایپسوم متن ساختگی از صنعت</span>
+                    <img src="/images/cat-flesh.png" alt="">
+                </div>
+            </div>
+          </a>
+        </div>
+        <div class="cat-col position-relative">
+          <a href="">
+              <img src="/images/cat2.png" alt="" class="cat-back">
+            <div class="cat-content">
+                <img src="/images/cat-img2.png" alt="">
+                <h1>مقوا</h1>
+               <div class="d-flex justify-content-between align-items-center">
+                    <span>لورم ایپسوم متن ساختگی  از صنعت</span>
+                    <img src="/images/cat-flesh.png" alt="">
+                </div>
+            </div>
+          </a>
+        </div>
+        <div class="cat-col position-relative">
+          <a href="">
+              <img src="/images/cat3.png" alt="" class="cat-back">
+            <div class="cat-content">
+                <img src="/images/cat-img3.png" alt="">
+                <h1>مقوا</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>لورم ایپسوم متن ساختگی  از صنعت</span>
+                    <img src="/images/cat-flesh.png" alt="">
+                </div>
+            </div>
+          </a>
+        </div>
+          </div>
+        </div>
+        <div class="row most-sale col-xl-11">
+            <h1>پرفروش ترین محصولات</h1>
+            <div class="owl-carousel owl-theme most-sale-owl">
+               <div class="p-3">
+                 <div class="most-item">
+                    <a href="">
+                        <img src="/images/pro-1.png" alt="">
+                        <h1>
+                            پرس وکیوم آسانسوری
+                        </h1>
+                    </a>
+                </div>
+               </div>
+            </div>
+        </div>
+       </section>
+       <section class="movie container-fluid">
+        <div class="row col-xl-11">
+            <div class="movie-txt">
+                <img src="/images/mahbod.png" alt="">
+            </div>
+        </div>
+       </section>
+    </main>
+    
+
+
+
+
+     <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
