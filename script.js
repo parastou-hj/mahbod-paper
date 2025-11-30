@@ -125,6 +125,25 @@ $(document).ready(function() {
     }
   });
 });
+  const $creativitySection = $('.creativity');
+  if ($creativitySection.length) {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      observer.observe($creativitySection[0]);
+    } else {
+      $creativitySection.addClass('is-visible');
+    }
+  }
 // Advanced Mega Menu with Touch Support
 $(document).ready(function() {
     // Handle mobile touch for mega menu
@@ -163,3 +182,55 @@ $(document).ready(function() {
     );
 });
  
+// Video Control Functionality
+$(document).ready(function() {
+    const $video = $('.movie-video');
+    const $control = $('.video-control');
+    const $controlIcon = $('.video-control i');
+    
+    if ($video.length && $control.length) {
+        // Toggle play/pause
+        $control.on('click', function() {
+            const video = $video[0];
+            
+            if (video.paused) {
+                video.play();
+                $video.removeClass('paused');
+                $controlIcon.removeClass('fa-play').addClass('fa-pause');
+            } else {
+                video.pause();
+                $video.addClass('paused');
+                $controlIcon.removeClass('fa-pause').addClass('fa-play');
+            }
+        });
+        
+        // Optional: Pause on scroll out of view
+        $(window).on('scroll', function() {
+            const videoTop = $video.offset().top;
+            const videoBottom = videoTop + $video.height();
+            const scrollTop = $(window).scrollTop();
+            const windowHeight = $(window).height();
+            
+            // Check if video is in viewport
+            if (scrollTop + windowHeight < videoTop || scrollTop > videoBottom) {
+                // Video is out of view
+                if (!$video[0].paused) {
+                    $video[0].pause();
+                    $video.addClass('paused');
+                    $controlIcon.removeClass('fa-pause').addClass('fa-play');
+                }
+            }
+        });
+        
+        // Ensure video is muted for autoplay
+        $video[0].muted = true;
+        
+        // Handle video loading errors
+        $video.on('error', function() {
+            console.error('خطا در بارگذاری ویدیو');
+            $('.movie-wrapper').append(
+                '<div class="video-error">خطا در بارگذاری ویدیو</div>'
+            );
+        });
+    }
+});
