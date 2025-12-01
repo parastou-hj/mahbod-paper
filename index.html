@@ -11,14 +11,14 @@
     <title>مهبد کاغذ</title>
 </head>
 <body>
-      <header class="neon-header">
+        <header class="neon-header">
         <div class="container-fluid p-0 header-container">
            <div class="row col-xl-11 header-top py-lg-2 px-lg-2 align-items-center">
                 <div class="col user-cart d-flex align-items-center justify-content-end gap-3">
                     <div class="cart me-2 header-action">
                         <div class="cart-pill">
                             <img src="./images/cart.png" alt="" class="cart-img">
-                            <span class="cart-label">خرید</span>
+                            
                         </div>
                         <div class="cart-badge">
                             <span>0</span>
@@ -163,15 +163,25 @@
                     </div> 
                 </div>
             </div>
-          <div class="row col-xl-11 header-down py-lg-2 px-lg-2 align-items-center">
-                <div class="col user-cart d-flex align-items-center justify-content-end gap-3">
-                    <div class=" me-2 header-action">
+          <div class=" header-down py-lg-2 px-lg-2 align-items-center">
+                <div class="row col-xl-11 mx-auto">
+                   <div class="col-12 user-cart d-flex align-items-center justify-content-end">
+                     <div class=" me-2 header-action">
                        
                         <a href="" class="logo">
                             <img src="/images/logo.png" alt="">
                         </a>
                     </div>
                     <div class="col-lg-8 d-flex align-items-center nav-middle">
+                        <!-- Mobile Menu Toggle -->
+                        <div class="mobile-menu-toggle d-lg-none">
+                            <button class="hamburger-btn" aria-label="منو">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        
                         <nav class="primary-nav">
                             <ul class="nav-list">
                                 <li class="nav-item"><a href="" class="nav-link">صفحه اصلی</a></li>
@@ -305,12 +315,29 @@
         </div>
     </div>
 </li>
-                                <li class="nav-item has-dropdown">
+                                <li class="nav-item has-dropdown about-dropdown">
                                     <a href="" class="nav-link">درباره ما</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="">تاریخچه مهبد</a></li>
-                                        <li><a href="">تیم ما</a></li>
-                                        <li><a href="">مسئولیت اجتماعی</a></li>
+                                    <ul class="dropdown-menu about-submenu">
+                                        <li><a href="#" class="about-link">
+                                            <i class="fa fa-history"></i>
+                                            <span>تاریخچه مهبد</span>
+                                        </a></li>
+                                        <li><a href="#" class="about-link">
+                                            <i class="fa fa-users"></i>
+                                            <span>تیم مدیریت</span>
+                                        </a></li>
+                                        <li><a href="#" class="about-link">
+                                            <i class="fa fa-award"></i>
+                                            <span>افتخارات و جوایز</span>
+                                        </a></li>
+                                        <li><a href="#" class="about-link">
+                                            <i class="fa fa-handshake"></i>
+                                            <span>مسئولیت اجتماعی</span>
+                                        </a></li>
+                                        <li><a href="#" class="about-link">
+                                            <i class="fa fa-chart-line"></i>
+                                            <span>گزارش عملکرد</span>
+                                        </a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a href="" class="nav-link">خدمات</a></li>
@@ -329,22 +356,119 @@
                         </div>
                        
                     </div>
-                    <div class="col-lg-2 d-flex justify-content-start">
+                    <div class="col-lg-2 d-flex justify-content-end">
                         <a class="store-btn" href="">فروشگاه</a>
                     </div>
+                   </div>
 
                
                 </div>
             </div>
  
         </div>
+         <!-- Mobile Off-Canvas Menu -->
+    <div class="mobile-offcanvas">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo">
+                <img src="/images/logo.png" alt="مهبد کاغذ">
+            </div>
+            <button class="offcanvas-close">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="offcanvas-body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                        <a href="" class="mobile-nav-link">
+                          
+                            <span>صفحه اصلی</span>
+                        </a>
+                    </li>
+                    
+                    <li class="mobile-nav-item has-mobile-submenu">
+                        <button class="mobile-nav-toggle">
+                            
+                            <span>محصولات</span>
+                             <i class="fa fa-chevron-down toggle-icon"></i>
+                           
+                        </button>
+                        <ul class="mobile-submenu">
+                            <li><a href="">کاغذ و مقوا</a></li>
+                            <li><a href="">ماشین آلات</a></li>
+                            <li><a href="">مواد مصرفی</a></li>
+                            <li><a href="">تجهیزات جانبی</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="mobile-nav-item has-mobile-submenu">
+                        <button class="mobile-nav-toggle">
+                           
+                            <span>درباره ما</span>
+                            <i class="fa fa-chevron-down toggle-icon"></i>
+                        </button>
+                        <ul class="mobile-submenu">
+                            <li><a href="">
+                                <i class="fa fa-history"></i>
+                                تاریخچه مهبد
+                            </a></li>
+                            <li><a href="">
+                                <i class="fa fa-users"></i>
+                                تیم مدیریت
+                            </a></li>
+                            <li><a href="">
+                                <i class="fa fa-award"></i>
+                                افتخارات و جوایز
+                            </a></li>
+                            <li><a href="">
+                                <i class="fa fa-handshake"></i>
+                                مسئولیت اجتماعی
+                            </a></li>
+                            <li><a href="">
+                                <i class="fa fa-chart-line"></i>
+                                گزارش عملکرد
+                            </a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="mobile-nav-item">
+                        <a href="" class="mobile-nav-link">
+                           
+                            <span>خدمات</span>
+                        </a>
+                    </li>
+                    
+                    <li class="mobile-nav-item">
+                        <a href="" class="mobile-nav-link">
+                           
+                            <span>فرصت‌های شغلی</span>
+                        </a>
+                    </li>
+                    
+                    <li class="mobile-nav-item">
+                        <a href="" class="mobile-nav-link">
+                           
+                            <span>تماس با ما</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        
+        </div>
+    </div>
+
+    <!-- Overlay for mobile menu -->
+    <div class="mobile-overlay"></div>
     </header>
+
     <main class="body-content">
        <section class="slider position-relative">
        <div class="owl-carousel owl-theme slider-owl px-0">
                 <div class="baner-item position-relative">
                    <a href="">
-                      <video class="movie-video" autoplay muted loop playsinline>
+                    <video class="video" muted playsinline>
                 <source src="/sample-video.mp4" type="video/mp4">
                
             </video>
@@ -369,13 +493,14 @@
                         <h2>
                             Screen printing technology brings new ideas to manufacturing
                         </h2>
-                        <button>فروشگاه</button>
+                       <div class="store-btn baner-btn" href="">فروشگاه</div>
                      </div>
                    </a>
                 </div>
                  
              </div>
-        <img src="/images/down-flesh.png" alt="" class="flesh">
+            <span class="flesh"> <i class="fa-solid fa-down-long "></i></span>
+        
        </section>
        <section class="container-fluid creativity py-5">
         <div class="row col-xl-11 py-5 ps-5 creativity-content">

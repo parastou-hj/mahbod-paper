@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   const headerMoving = () => {
     let lastScrollTop = 0;
@@ -81,6 +79,21 @@ $(document).ready(function() {
         void $currentItem[0].offsetWidth;
         $currentItem.addClass('is-animating');
       }
+      
+      // کنترل ویدیوها: توقف همه ویدیوها و پخش ویدیوی اسلاید فعال
+      const $allVideos = $slider.find('.owl-item video');
+      $allVideos.each(function() {
+        this.pause();
+        this.currentTime = 0;
+      });
+      
+      const $currentVideo = $currentItem.find('video');
+      if ($currentVideo.length && $currentVideo[0]) {
+        // پخش ویدیوی اسلاید فعال
+        $currentVideo[0].play().catch(function(error) {
+          console.log('خطا در پخش ویدیو:', error);
+        });
+      }
     };
 
     $slider.on('initialized.owl.carousel translated.owl.carousel', triggerBannerAnimation);
@@ -93,6 +106,16 @@ $(document).ready(function() {
       rtl: true,
       nav: false,
       dots: false
+    });
+    
+    // وقتی ویدیو تمام شد، دوباره از اول پخش شود
+    $slider.find('video').each(function() {
+      $(this).on('ended', function() {
+        this.currentTime = 0;
+        this.play().catch(function(error) {
+          console.log('خطا در پخش مجدد ویدیو:', error);
+        });
+      });
     });
   }
 
@@ -236,6 +259,70 @@ $(document).ready(function() {
         });
     }
 });
+
+// Off-Canvas Mobile Menu Functionality
+$(document).ready(function() {
+    const $hamburgerBtn = $('.hamburger-btn');
+    const $mobileOffcanvas = $('.mobile-offcanvas');
+    const $mobileOverlay = $('.mobile-overlay');
+    const $offcanvasClose = $('.offcanvas-close');
+    const $mobileNavToggle = $('.mobile-nav-toggle');
+    const $body = $('body');
+
+    // Open mobile menu
+    $hamburgerBtn.on('click', function() {
+        $hamburgerBtn.addClass('active');
+        $mobileOffcanvas.addClass('open');
+        $mobileOverlay.addClass('show');
+        $body.addClass('mobile-menu-open');
+    });
+
+    // Close mobile menu
+    function closeMobileMenu() {
+        $hamburgerBtn.removeClass('active');
+        $mobileOffcanvas.removeClass('open');
+        $mobileOverlay.removeClass('show');
+        $body.removeClass('mobile-menu-open');
+        
+        // Close all open submenus
+        $('.mobile-nav-toggle').removeClass('active');
+        $('.mobile-submenu').removeClass('open');
+    }
+
+    $offcanvasClose.on('click', closeMobileMenu);
+    $mobileOverlay.on('click', closeMobileMenu);
+
+    // Handle mobile submenu toggles
+    $mobileNavToggle.on('click', function() {
+        const $this = $(this);
+        const $submenu = $this.next('.mobile-submenu');
+        
+        $this.toggleClass('active');
+        $submenu.toggleClass('open');
+    });
+
+    // Close mobile menu on window resize
+    $(window).on('resize', function() {
+        if (window.innerWidth > 992) {
+            closeMobileMenu();
+        }
+    });
+
+    // Prevent body scroll when mobile menu is open
+    $body.on('touchmove', function(e) {
+        if ($body.hasClass('mobile-menu-open') && !$(e.target).closest('.mobile-offcanvas').length) {
+            e.preventDefault();
+        }
+    });
+
+    // Handle Escape key
+    $(document).on('keydown', function(e) {
+        if (e.keyCode === 27 && $mobileOffcanvas.hasClass('open')) {
+            closeMobileMenu();
+        }
+    });
+});
+
 $('.owl-brands').owlCarousel({
     rtl: true,
     loop: true,
@@ -368,3 +455,14 @@ $('.owl-brands').owlCarousel({
 document.addEventListener('DOMContentLoaded', function() {
     new CounterAnimation();
 });
+
+// Additional CSS for body when mobile menu is open
+const style = document.createElement('style');
+style.textContent = `
+    body.mobile-menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+`;
+document.head.appendChild(style);
