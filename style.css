@@ -1189,6 +1189,7 @@
     transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 9999;
     overflow-y: auto;
+    display: none;
   }
   
   .mobile-offcanvas.open {
@@ -1582,25 +1583,26 @@
    }
    .baner-txt{
      position: absolute;
-     left: 30px;
+     left: 70px;
      bottom: 70px;
      direction: ltr;
    }
    .baner-txt h1{
     font-size: 5em;
-    color: var(--primary-color);
-    text-shadow: 0px 0px #555;
+    color: hsl(174.21deg 95% 52.94%);
+    text-shadow: 0px 0px hsl(174.5deg 43.43% 50.78%);
     max-width: 450px;
     /* font-weight: bold; */
     font-family:enfont;
    }
     .baner-txt h2{
     font-size: 1.9em;
-    color: var(--primary-color);
-    /* text-shadow: 0px 0px #555; */
+    color: hsl(174.21deg 95% 52.94%);
+    text-shadow: 0px 0px hsl(174.5deg 43.43% 50.78%);
     max-width: 580px;
     /* font-weight: bold; */
-    font-family:enfont;
+    /* font-family:enfont; */
+    font-weight: lighter;
    }
    .baner-txt > *{
      opacity: 0;
@@ -1610,6 +1612,8 @@
    .baner-btn{
     box-shadow: none;
     margin-top: 25px;
+    background: hsl(172.8deg 100% 29.41%) !important;
+       /* font-stretch: expanded; */
    }
 
    .baner-item.is-animating .slider-shapes .n1 img{
@@ -1697,6 +1701,31 @@
 
 .creativity{
    background: linear-gradient(180deg, hsl(0 0% 3.53%) 0%,  hsl(0 0% 13.73%) 100% );
+}
+.creativity-heading h1{
+        margin-bottom: 140px;
+    text-align: center;
+    font-size: 4.7em;
+    font-family:enfont ;
+    direction: ltr;
+}
+.cre-txt h1{
+    font-size: 1.7em;
+    color: hsl(174.18deg 95.71% 27.45%);
+      font-family: IRANYekanWebBold;
+      margin-bottom: 30px;
+       font-stretch: expanded;
+
+}
+.cre-txt p{
+    font-size: 1.2em;
+        font-family: IRANYekanWebBold;
+        color: #d4d3d3;
+}
+.line{
+    font-size: 1.2em;
+        /* font-family: IRANYekanWebBold; */
+        color: hsl(0, 0%, 45%) !important;
 }
 .creativity-heading,
 .creativity-text,
@@ -1799,12 +1828,24 @@
     border-radius: 50%;
 }
 .category{
-    background-color: hsl(0deg 0% 14.12%);
+       background: linear-gradient(180deg, hsl(0 0% 13.73%) 0%,  hsl(0, 0%, 11%) 100% );
+}
+.most-sec{
+    margin-top: 200px;
+    z-index: 1;
+}
+.most-sec h1{
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 40px;
 }
 .cat-shape{
     position: absolute;
     right: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
 }
 .most-item{
     border: 1px solid hsl(0deg 0% 28.24%);
@@ -2056,13 +2097,13 @@
 
 /* ==================== Movie Section with Masked Video ==================== */
 .movie {
-    padding: 200px 0;
+    padding: 100px 0 200px 0;
     position: relative;
     overflow: hidden;
 background: linear-gradient(
   180deg,
-  hsl(0 0% 13.73%) 0%,   /* بالا روشن‌تر */
-  hsl(0 0% 3.53%) 100%   /* پایین تیره‌تر */
+  hsl(0, 0%, 15%) 20%,   
+  hsl(0 0% 3.53%) 80%   
 );
 
 
@@ -2070,13 +2111,15 @@ background: linear-gradient(
 
 .movie-wrapper {
     position: relative;
-    width: 100%;
+    width: 80%;
     /* height: 600px; */
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 30px;
     overflow: hidden;
+    height: 400px;
+    margin: 0 auto;
     /* background: linear-gradient(135deg, rgba(10, 19, 22, 0.95) 0%, rgba(6, 28, 32, 0.9) 100%);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); */
 }
@@ -2120,28 +2163,25 @@ background: linear-gradient(
 /* Video Control Button */
 .video-control {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: transparent;
     z-index: 3;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, 
-        var(--primary-color) 0%, 
-        var(--primary-glow) 100%);
-    border: 2px solid rgba(195, 254, 247, 0.3);
-    color: var(--black-back);
     font-size: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(0, 255, 213, 0.3);
+    /* box-shadow: 0 8px 24px rgba(0, 255, 213, 0.3); */
+    border: none;
 }
 
 .video-control:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     box-shadow: 0 12px 32px rgba(0, 255, 213, 0.5);
 }
 
@@ -2151,18 +2191,18 @@ background: linear-gradient(
 
 /* Glow Effect Around Video */
 .movie-wrapper::before {
-    content: '';
+    /* content: ''; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    background: radial-gradient(
+    /* background: radial-gradient(
         circle at center,
         rgba(0, 255, 213, 0.1) 0%,
         transparent 70%
-    );
+    ); */
     z-index: 0;
     animation: glow-pulse 3s ease-in-out infinite;
 }
@@ -2245,10 +2285,15 @@ background: linear-gradient(
   hsl(0 0% 13.73%) 100%   /* پایین تیره‌تر */
     )
 }
-
+.neon-sec p{
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: hsl(0, 0%, 79%);
+    text-align: justify;
+}
 .neon-sec-img{
     position: absolute;
-    top: -80px;
+    top: -180px;
     left: 100px;
 }
 .neon-overlay{
