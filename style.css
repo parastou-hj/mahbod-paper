@@ -1141,6 +1141,9 @@
      transform: translateY(20px) scale(.9);
      will-change: transform, opacity;
    }
+   .slider{
+    height: 700px;
+   }
    .baner-txt{
      position: absolute;
      left: 30px;
