@@ -1924,7 +1924,7 @@ background: linear-gradient(
         
         
         .footer-links {
-            list-style: none;
+            list-style: none !important;
         }
         
         .footer-links li {
@@ -1939,15 +1939,21 @@ background: linear-gradient(
             display: flex;
             align-items: center;
         }
+        .footer-column h4{
+            position: relative;
+        }
         
-        .footer-links a:before {
-            content: '•';
-            margin-left: 8px;
-            color: #999;
+        .footer-column h4:before {
+              content: '•';
+    position: absolute;
+    margin-left: 2px;
+    color: #fff;
+    top: 5px;
+    right: -10px
         }
         
         .footer-links a:hover {
-            color: #d81616;
+            color: var(--primary-color);
         }
          /* Accordion Checkboxes - Hidden */
         .accordion-toggle {
@@ -2038,9 +2044,89 @@ background: linear-gradient(
     }
 }
 footer{
-    background-color: hsl(0deg 0% 14.51%);
+   background: linear-gradient(
+  180deg,
+  hsl(0 0% 13.73%) 0%,   /* بالا روشن‌تر */
+  hsl(0, 0%, 11%) 100%   /* پایین تیره‌تر */
+   );
     padding-top: 220px;
 }
  .footer-top{
     margin-top: -340px;
   }
+  .f-top-sec{
+    border-bottom: 1px solid #b9b8b8;
+  }
+  .social-section{
+  display: flex;
+  /* justify-content:space-between; */
+  align-items: center;
+  color: hsl(0deg 0% 89.02%);
+  font-family: IRANYekanWebBold;
+  font-size: 1.1em;
+
+ }
+.socials{
+  width: 100%;
+  gap: 10px;
+}
+ .social-icon {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  padding: 10px;
+ 
+}
+
+.social-icon img {
+  /* width: 30px;  */
+  transition: transform 0.3s ease;
+}
+
+
+.social-icon:hover {
+  filter: grayscale(0%);
+  transform: translateY(-5px);
+}
+
+
+.social-icon:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+
+.social-icon:hover::after { 
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+
+
+.social-icon:hover img {
+  transform: rotate(360deg) scale(1.2);
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.social-icon:hover {
+  animation: pulse 1s infinite;
+}
+.footer-rights{
+    color: #666;
+}
+.footer-rights a{
+    color: #666;
+}
