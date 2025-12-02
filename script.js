@@ -122,8 +122,8 @@ $(document).ready(function() {
   $('.most-sale-owl').owlCarousel({
     rtl: true,
     loop: true,
-    nav: true,
-    dots: true,
+    nav: false,
+    dots: false,
     autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
@@ -265,8 +265,8 @@ $(document).ready(function() {
 $('.owl-brands').owlCarousel({
     rtl: true,
     loop: true,
-    nav: true,
-    dots: true,
+    nav: false,
+    dots: false,
     autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,

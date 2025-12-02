@@ -12,10 +12,17 @@
 </head>
 <body>
         <header class="neon-header">
-        <div class="container-fluid p-0 header-container">
+        <div class="container-fluid px-0 p-0 header-container">
            <div class="row col-xl-11 header-top py-lg-2 px-lg-2 align-items-center">
-                <div class="col user-cart d-flex align-items-center justify-content-end gap-3">
-                    <div class="cart me-2 header-action">
+                <div class="col user-cart d-flex align-items-center justify-content-between justify-content-md-end gap-3">
+                     <div class=" me-2 header-action  d-lg-none">
+                       
+                        <a href="" class="logo">
+                            <img src="/images/logo.png" alt="">
+                        </a>
+                    </div>
+                   <div class="d-flex">
+                     <div class="cart me-2 header-action">
                         <div class="cart-pill">
                             <img src="./images/cart.png" alt="" class="cart-img">
                             
@@ -161,26 +168,29 @@
                         </div>
                         
                     </div> 
+                   </div>
                 </div>
             </div>
           <div class=" header-down py-lg-2 px-lg-2 align-items-center">
                 <div class="row col-xl-11 mx-auto">
-                   <div class="col-12 user-cart d-flex align-items-center justify-content-end">
-                     <div class=" me-2 header-action">
+                   <div class="col-12 user-cart d-flex align-items-center justify-content-between">
+                     <div class="col-2 me-2 header-action ">
                        
-                        <a href="" class="logo">
+                        <a href="" class="logo d-none d-lg-flex">
                             <img src="/images/logo.png" alt="">
                         </a>
-                    </div>
-                    <div class="col-lg-8 d-flex align-items-center nav-middle">
-                        <!-- Mobile Menu Toggle -->
-                        <div class="mobile-menu-toggle d-lg-none">
+                           <div class="mobile-menu-toggle d-lg-none">
                             <button class="hamburger-btn" aria-label="منو">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </button>
                         </div>
+
+                    </div>
+                    <div class="col-lg-8 d-flex align-items-center nav-middle me-auto me-lg-0">
+                        <!-- Mobile Menu Toggle -->
+                     
                         
                         <nav class="primary-nav">
                             <ul class="nav-list">
@@ -474,8 +484,8 @@
             <span class="flesh"> <i class="fa-solid fa-down-long "></i></span>
         
        </section>
-       <section class="container-fluid creativity py-5">
-        <div class="row col-xl-11 py-5 ps-5 creativity-content">
+       <section class="container-fluid px-0 creativity py-lg-5 py-2">
+        <div class="row col-xl-11 py-5 ps-lg-5 creativity-content">
             <div class="col-12 creativity-heading">
                 <h1>
                     FROM PAPER TO MASTERPIECE !
@@ -489,26 +499,28 @@
                 <p class="text-mute line">
 برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود
                 </p>
-                <a href="" class="d-flex">
-                    بیشتر بخوانید
-                    <div class="more-btn">
-                        <img src="/images/more.png" alt="">
-                    </div>
-                </a>
+                <a href="#" class="more-link d-flex align-items-center">
+   
+    <span>بیشتر بخوانید</span>
+     <div class="more-btn">
+        <img src="/images/more.png" alt="">
+    </div>
+</a>
+
             </div>
             <div class="col-lg-6 position-relative py-5 creativity-visual">
                 <div class="anim-img  ">
-                    <img src="/images/anim1.png" alt="" class="anim1">
-                    <img src="/images/anim2.png" alt="" class="anim2">
-                    <img src="/images/anim3.png" alt="" class="anim3">
-                    <img src="/images/anim4.png" alt="" class="anim4">
-                    <img src="/images/anim5.png" alt="" class="anim5">
-                    <img src="/images/anim6.png" alt="" class="anim6">
+                    <img src="/images/anim1.png" alt="" class="anim1 img-fluid">
+                    <img src="/images/anim2.png" alt="" class="anim2 img-fluid">
+                    <img src="/images/anim3.png" alt="" class="anim3 img-fluid">
+                    <img src="/images/anim4.png" alt="" class="anim4 img-fluid">
+                    <img src="/images/anim5.png" alt="" class="anim5 img-fluid">
+                    <img src="/images/anim6.png" alt="" class="anim6 img-fluid">
                 </div>
             </div>
         </div>
        </section>
-       <section class="category container-fluid py-5 px-0 position-relative ">
+       <section class="category container-fluid px-0 py-lg-5 px-0 position-relative ">
         <img src="/images/cat-shap.png" alt="" class="cat-shape">
         <div class="row col-xl-11 d-flex ">
           <div class="d-flex flex-lg-row flex-column justify-content-center align-items-center">
@@ -601,7 +613,7 @@
             </div>
         </div>
        </section>
-    <section class="movie container-fluid ">
+    <section class="movie container-fluid px-0 ">
     <div class="row col-xl-11">
         <div class="movie-wrapper">
             <!-- Video Background -->
@@ -622,7 +634,7 @@
         </div>
     </div>
 </section>
-<div class="neon-sec container-fluid position-relative">
+<div class="neon-sec container-fluid px-0 position-relative">
       <img src="/images/neon-overlay.png" alt="" class="neon-overlay">
     <div class="row col-xl-11  position-relative">
       
@@ -641,7 +653,7 @@
    
  
 </div>
-<div class="container-fluid position-relative map-sec">
+<div class="container-fluid px-0 position-relative map-sec">
      <img src="/images/map-overlay.png" alt="" class="map-overlay">
        <div class="row col-xl-11   py-5 ">
         <div class="map-overlay">
@@ -658,8 +670,8 @@
             <img src="/images/map.png" alt="" class="img-fluid">
         </div>
     </div>
-<section class=" brands-sec row col-xl-11 container-fluid py-5">
-    <div class="owl-carousel owl-theme owl-brands">
+<section class=" brands-sec row col-xl-11 container-fluid px-0 py-lg-5 px-0">
+    <div class="owl-carousel owl-theme owl-brands px-0">
        <div class="p-3">
          <div class="brand-item">
             <a href="">
@@ -706,7 +718,7 @@
 </section>
 </div>
 
-<section class="news container-fluid">
+<section class="news container-fluid px-0">
     <div class="row col-xl-11">
         <div class="col-lg-6">
             <div class="news-section">
@@ -731,12 +743,14 @@
                     </div>
                 </div>
                 
-                <div class="read-more">
-                    <button class="btn-read-more">
-                        <span>بیشتر بخوانید</span>
-                        <i class="arrow-icon">◀</i>
-                    </button>
-                </div>
+               <a href="#" class="more-link d-flex align-items-center">
+    
+    <span>بیشتر بخوانید</span>
+    <div class="more-btn">
+        <img src="/images/more.png" alt="">
+    </div>
+</a>
+
             </div>
         </div>
          <div class="col-lg-6">
@@ -762,21 +776,23 @@
                     </div>
                 </div>
                 
-                <div class="read-more">
-                    <button class="btn-read-more">
-                        <span>بیشتر بخوانید</span>
-                        <i class="arrow-icon">◀</i>
-                    </button>
-                </div>
+              <a href="#" class="more-link d-flex align-items-center">
+   
+    <span>بیشتر بخوانید</span>
+     <div class="more-btn">
+        <img src="/images/more.png" alt="">
+    </div>
+</a>
+
             </div>
         </div>
     </div>
 </section>
  <section class="percent-sec d-flex  py-2 py-sm-0">
             <!-- <img src="./images/body-back.png" alt=""> -->
-            <div class="container-fluid px-0">
+            <div class="container-fluid px-0 px-0">
                 <div class="row col-xl-11 justify-content-center">
-                   <div class="px-3 percents d-flex justify-content-between">
+                   <div class="px-lg-3 px-0 percents d-lg-flex justify-content-between d-none">
                   
                    
                      <div class="percent-item">
@@ -799,33 +815,68 @@
                         <p>مزایده</p>
                     </div>
                    </div>
+
+                <!---------prcent-sec-mobile-->
+                 <div class="px-3 percents d-flex flex-column justify-content-between d-lg-none pt-3">
+                  
+                   
+                    <div class="d-flex">
+                         <div class="percent-item">
+                        <span>20%</span>
+                        <p>سهم از  بازار بهره برداری</p>
+                    </div>
+                     <div class="percent-item">
+                        <span>352</span>
+                        <p>پروژه های انجام شده </p>
+                    </div>
+                    </div>
+                     <div class="percent-item d-flex align-items-center img-per ">
+                        <img src="/images/percent-img.png" alt="" class="percent-img">
+                    </div>
+                    <div class="d-flex">
+                         <div class="percent-item">
+                        <span>72</span>
+                        <p>محصولات</p>
+                    </div>
+                     <div class="percent-item">
+                        <span>34%</span>
+                        <p>مزایده</p>
+                    </div>
+                    </div>
+                   </div>
                 </div>
             </div>
         </section>
 <footer>
-    <div class="container-fluid f-top-sec pb-5">
+    <div class="container-fluid px-0 f-top-sec pb-5">
         <div class="row col-xl-11">
-            <div class=" px-5">
+            <div class=" px-lg-5 px-0">
                 <div class="footer-top d-flex">
         <div class="f-t-item ">
-            <img src="/images/post.png" alt="">
-           <div class="d-flex align-items-center">
+            <div class="ft-img">
+                <img src="/images/post.png" alt="">
+            </div>
+           <div class="ft-txt">
              <span>به لیست پستی ما بپیوندید</span>
-            <img src="" alt="">
+            <img src="/images/ft-flesh.png" alt="">
            </div>
         </div>
          <div class="f-t-item">
-            <img src="/images/catalog.png" alt="">
-           <div class="d-flex align-items-center">
+           <div class="ft-img">
+             <img src="/images/catalog.png" alt="">
+           </div>
+           <div class="ft-txt">
              <span>دانلود کاتالوگ</span>
-            <img src="" alt="">
+            <img src="/images/ft-flesh.png" alt="">
            </div>
         </div>
           <div class="f-t-item">
-            <img src="/images/consul.png" alt="">
-           <div class="d-flex align-items-center">
+          <div class="ft-img">
+              <img src="/images/consul.png" alt="">
+          </div>
+           <div class="ft-txt">
              <span>درخواست مشاوره</span>
-            <img src="" alt="">
+            <img src="/images/ft-flesh.png" alt="">
            </div>
         </div>
     </div>
@@ -833,7 +884,7 @@
         </div>
         <div class="row col-xl-11">
               <div class="footer-middle">
-            <div class="footer-column ">
+            <div class="footer-column text-center text-lg-start mb-4 mb-lg-0 logo-footer">
                 
               <img src="/images/footer-logo.png" alt="">
             </div>
@@ -895,7 +946,7 @@
         </div>
         </div>
     </div>
-    <div class="container-fluid footer-bottom py-5">
+    <div class="container-fluid px-0 footer-bottom py-5">
         <div class="row col-xl-11">
             <div class="col-lg-6">
                 <div class="footer-rights mb-2">
