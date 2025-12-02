@@ -739,7 +739,7 @@
  }
  
  .remove-item-btn:hover {
-     background: hsl(304.44deg 100% 21.18%);
+     background: var(--primary-glow);
      color: white;
      transform: translateY(-50%) scale(1.1);
  }
@@ -747,7 +747,7 @@
  .cart-footer {
      padding: 15px 20px;
      border-top: 2px solid rgba(77, 20, 140, 0.1);
-     background: #fff;
+     /* background: #fff; */
  }
  
 .cart-total {
@@ -765,7 +765,7 @@
 .total-label {
     font-size: 15px;
     font-weight: 600;
-    color: #333;
+    color: #b6b4b4;
 }
 
 .total-amount {
@@ -776,13 +776,13 @@
 .amount {
     font-size: 18px;
     font-weight: 700;
-    color: hsl(266.25deg 88.89% 21.18%);
+    color: var(--primary-color);
     margin-left: 4px;
 }
 
 .currency {
     font-size: 13px;
-    color: #666;
+    color: #b6b4b4;
 }
 
 .cart-actions {
@@ -805,15 +805,15 @@
 
 .view-cart-btn {
     background: #fff;
-    color: hsl(266.25deg 88.89% 21.18%) !important;
-    border-color: hsl(266.25deg 88.89% 21.18%);
+    color: var(--primary-color) !important;
+    border-color: #fff;
 }
 
 .view-cart-btn:hover {
-    background: hsl(266.25deg 88.89% 21.18%);
+    background: var(--primary-color);
     color: #fff !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(77, 20, 140, 0.3);
+    box-shadow: 0 6px 16px  var(--primary-color);
 }
 
 .checkout-btn {
@@ -1333,6 +1333,9 @@
 
    
 }
+.fleshh a{
+    color:#fff
+}
 .flesh i{
  animation: downMove 1.5s infinite ease-in-out;
 }
@@ -1356,7 +1359,7 @@
    background: linear-gradient(180deg, hsl(0 0% 3.53%) 0%,  hsl(0 0% 13.73%) 100% );
 }
 .creativity-heading h1{
-        margin-bottom: 140px;
+        margin-bottom: 80px;
     text-align: center;
     font-size: 4.7em;
     font-family:enfont ;
@@ -1953,7 +1956,7 @@ background: linear-gradient(
 .neon-sec-img{
     position: absolute;
     top: -180px;
-    left: 100px;
+    left: 70px;
 }
 .neon-overlay{
     position: absolute;
@@ -2695,6 +2698,12 @@ body.mobile-menu-open {
 }
 
          @media (max-width: 991px) {
+            .neon-matn{
+                width: 500px;
+            }
+            .map-txt{
+                text-align: center;
+            }
             .ft-txt{
                 margin-top: 0;
     margin-right: 20px;
@@ -2957,4 +2966,324 @@ ease forwards .3s;
 }
 .ft-txt{
     font-size: 1.2em;
+}
+.neon-sec-img {
+ 
+    animation: diagonalSwing 3s ease-in-out infinite;
+}
+
+@keyframes diagonalSwing {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(12px, -12px); /* حرکت مورب */
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.news-ticker-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff; 
+  border: 1px solid var(--primary-color); 
+  border-radius: 20px; 
+  padding: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.news-ticker-label {
+  background-color: #66cdaa; 
+  color: white;
+  padding: 8px 20px;
+  border-radius: 15px; 
+  font-weight: bold;
+  white-space: nowrap; 
+  margin-left: 10px; 
+}
+
+.news-items-viewport {
+  flex-grow: 1; 
+  overflow: hidden; 
+  direction: ltr; 
+}
+
+.news-items-wrapper {
+  display: flex; 
+  width: fit-content; 
+
+  animation: scroll-left-to-right 70s linear infinite;
+  animation-delay: 0s;
+animation-fill-mode: none;
+}
+
+.news-items-wrapper:hover {
+  /* animation-play-state: paused;  */
+}
+
+.news-content-block {
+  display: flex; 
+  align-items: center;
+  white-space: nowrap; 
+  /* padding-right: 20px; /* ایجاد فاصله بین دو بلوک محتوا، اگر لازم باشد */
+}
+
+.news-ticker-container .news-item {
+  padding: 0 10px; 
+  color: #333;
+  font-size: 14px;
+}
+.news-ticker-container .news-item:hover {
+  color: var(--primary-color);
+}
+
+.news-item-separator {
+  background-color: var(--primary-color); 
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-flex; 
+  align-items: center;
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(-100%);    
+  }
+}
+/* ==================== Category Column Hover Effects ==================== */
+.cat-col {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 213, 0.1) 0%, 
+        rgba(0, 161, 141, 0.15) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    /* border-radius: 20px; */
+}
+
+.cat-col:hover::before {
+    opacity: 1;
+}
+
+.cat-col:hover {
+    /* transform: translateY(-10px) scale(1.02); */
+    box-shadow: 0 20px 50px rgba(0, 255, 213, 0.25),
+                0 0 30px rgba(0, 255, 213, 0.15);
+}
+
+.cat-col .cat-back {
+    transition: all 0.4s ease;
+    /* border-radius: 20px; */
+}
+
+.cat-col:hover .cat-back {
+    filter: brightness(1.1);
+    box-shadow: inset 0 0 40px rgba(0, 255, 213, 0.2);
+}
+
+.cat-col .cat-content {
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.cat-col:hover .cat-content {
+    /* transform: translateY(-5px); */
+}
+
+.cat-col .cat-content h1 {
+    transition: all 0.3s ease;
+}
+
+.cat-col:hover .cat-content h1 {
+    color: var(--accent-color);
+    text-shadow: 0 0 20px var(--primary-glow);
+}
+
+.cat-col .cat-content img:last-child {
+    transition: transform 0.3s ease;
+}
+
+.cat-col .cat-content > div img {
+    transition: all 0.3s ease;
+}
+
+.cat-col:hover .cat-content > div img {
+    transform: translateX(-5px);
+    filter: brightness(0) saturate(100%) invert(70%) sepia(99%) saturate(565%) hue-rotate(140deg) brightness(1.2);
+}
+
+/* ==================== Most Item Hover Effects ==================== */
+.most-item {
+    border: 1px solid hsl(0deg 0% 28.24%);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 15px; */
+}
+
+
+
+.most-item:hover::before {
+    opacity: 1;
+}
+
+.most-item:hover {
+    /* transform: translateY(-10px) scale(1.03); */
+    border-color: var(--primary-color);
+    /* box-shadow: 0 20px 50px rgba(0, 255, 213, 0.25),
+                0 30px 60px rgba(0, 255, 213, 0.15); */
+}
+
+.most-item img {
+    transition: all 0.4s ease;
+}
+
+.most-item:hover img {
+    transform: scale(1.05);
+    /* filter: brightness(1.1); */
+}
+
+.most-item h1 {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.most-item:hover h1 {
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--primary-glow);
+}
+/* ==================== News Item Hover Effects ==================== */
+.news-item {
+    border-bottom: 1px solid #444;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+/* 
+.news-item::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(0, 255, 213, 0.06) 0%,
+        transparent 100%);
+    transition: width 0.4s ease;
+    z-index: 0;
+} */
+
+.news-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+        var(--primary-color) 0%,
+        var(--primary-glow) 100%);
+    box-shadow: 0 0 10px var(--primary-glow);
+    transition: width 0.5s ease;
+    z-index: 1;
+}
+
+.news-item:hover::before {
+    width: 100%;
+}
+
+.news-item:hover::after {
+    width: 100%;
+}
+
+.news-item:hover {
+    padding-right: 15px;
+}
+
+.news-item a {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.news-title {
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: right;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.news-item:hover .news-title {
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--primary-glow);
+    transform: translateX(-5px);
+}
+/* ==================== Footer Top Item Hover Effects ==================== */
+.f-t-item {
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.f-t-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.f-t-item:hover::before {
+    opacity: 1;
+}
+
+.f-t-item .ft-img,
+.f-t-item .ft-txt {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.f-t-item:hover .ft-img {
+    /* transform: scale(1.1); */
+}
+
+.f-t-item:hover .ft-txt {
+    /* transform: translateY(-5px); */
+}
+
+.f-t-item:hover .ft-txt span {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--primary-glow);
 }
