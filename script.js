@@ -1,173 +1,78 @@
 $(document).ready(function() {
-  const headerMoving = () => {
-    let lastScrollTop = 0;
-    let isHeaderVisible = true;
-    const $mainHeader = $('.header-container');
-    const $downHeader = $('.header-down');
-    if (window.innerWidth > 990) {
-      $(window).scroll(function() {
-        const currentScroll = $(this).scrollTop();
-        if (currentScroll > 100) {
-          if (currentScroll > lastScrollTop && isHeaderVisible) {
-            $mainHeader.addClass('header-hidden');
-            $downHeader.addClass('header-up-lg');
-            isHeaderVisible = false;
-          }
-        } else {
-          $mainHeader.removeClass('header-hidden');
-          $downHeader.removeClass('header-up-lg');
-          isHeaderVisible = true;
-        }
+    // Sticky Header functionality
+    const headerBottom = $('.header-bottom');
+    const headerContainer = $('.header-container');
 
-        lastScrollTop = currentScroll;
-      });
-    } else if (window.innerWidth <= 992) {
-      $(window).scroll(function() {
-        const currentScroll = $(this).scrollTop();
-        if (currentScroll > 100) {
-          if (currentScroll > lastScrollTop && isHeaderVisible) {
-            $downHeader.addClass('header-hidden');
-            isHeaderVisible = false;
-          }
-        } else {
-          $downHeader.removeClass('header-hidden');
-          isHeaderVisible = true;
-        }
-
-        lastScrollTop = currentScroll;
-      });
-
-     }
-
-  };
- 
-  headerMoving();
-  $(window).resize(headerMoving);
-
-  const $navSearch = $('.nav-search');
-  const $searchToggle = $('.search-toggle');
-  const $searchInput = $('.search-box input');
-
-  if ($navSearch.length) {
-    $searchToggle.on('click', function(event) {
-      event.preventDefault();
-      $navSearch.toggleClass('open');
-      if ($navSearch.hasClass('open')) {
-        $searchInput.trigger('focus');
-      }
-    });
- 
-
-    $(document).on('click', function(event) {
-      if (!$(event.target).closest('.nav-search').length) {
-        $navSearch.removeClass('open');
-      }
-     });
-  }
- 
-  const $slider = $('.slider-owl');
-  if ($slider.length) {
-    const triggerBannerAnimation = (event) => {
-      const currentIndex = event && event.item && typeof event.item.index === 'number'
-        ? event.item.index
-        : 0;
-      const $items = $slider.find('.owl-item .baner-item');
-      $items.removeClass('is-animating');
-
-      const $currentItem = $slider.find('.owl-item').eq(currentIndex).find('.baner-item');
-      if ($currentItem.length) {
-        void $currentItem[0].offsetWidth;
-        $currentItem.addClass('is-animating');
-      }
-      
-      // کنترل ویدیوها: توقف همه ویدیوها و پخش ویدیوی اسلاید فعال
-      const $allVideos = $slider.find('.owl-item video');
-      $allVideos.each(function() {
-        this.pause();
-        this.currentTime = 0;
-      });
-      
-      const $currentVideo = $currentItem.find('video');
-      if ($currentVideo.length && $currentVideo[0]) {
-        // پخش ویدیوی اسلاید فعال
-        $currentVideo[0].play().catch(function(error) {
-          console.log('خطا در پخش ویدیو:', error);
-        });
-      }
-    };
-
-    $slider.on('initialized.owl.carousel translated.owl.carousel', triggerBannerAnimation);
-    $slider.owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      rtl: true,
-      nav: false,
-      dots: false
-    });
     
-    // وقتی ویدیو تمام شد، دوباره از اول پخش شود
-    $slider.find('video').each(function() {
-      $(this).on('ended', function() {
-        this.currentTime = 0;
-        this.play().catch(function(error) {
-          console.log('خطا در پخش مجدد ویدیو:', error);
-        });
-      });
+    // ایجاد placeholder برای جلوگیری از جهش محتوا
+    const placeholder = $('<div class="sticky-placeholder"></div>');
+    headerContainer.after(placeholder);
+    
+    let isSticky = false;
+    
+    // محاسبه offset برای شروع sticky
+    function getHeaderBottomOffset() {
+        const headerTop = $('.header-top');
+        const headerMiddle = $('.header-middle');
+      
+        
+        let offset = 0;
+        if (headerTop.length) offset += headerTop.outerHeight();
+        if (headerMiddle.length) offset += headerMiddle.outerHeight();
+        
+        return offset;
+    }
+    
+    function handleScroll() {
+        const scrollTop = $(window).scrollTop();
+        const headerBottomOffset = getHeaderBottomOffset();
+        
+        if (scrollTop >= headerBottomOffset) {
+            // اگر sticky نیست، sticky کن
+            if (!isSticky) {
+                headerBottom.addClass('sticky');
+                placeholder.addClass('active').height(headerBottom.outerHeight());
+                isSticky = true;
+       
+
+            }
+        } else {
+            // اگر به بالای صفحه برگشته، sticky را بردار
+            if (isSticky) {
+                headerBottom.removeClass('sticky');
+                placeholder.removeClass('active');
+                isSticky = false;
+            
+            }
+        }
+    }
+    
+    // Event listener با performance optimization
+    let ticking = false;
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    
+    $(window).on('scroll', requestTick);
+    
+    // بررسی اولیه در صورت لود شدن صفحه در وسط
+    handleScroll();
+    
+    // مدیریت resize برای responsive بودن
+    $(window).on('resize', function() {
+        if (isSticky) {
+            placeholder.height(headerBottom.outerHeight());
+        }
     });
-  }
-
-  $('.most-sale-owl').owlCarousel({
-    rtl: true,
-    loop: true,
-    nav: false,
-    dots: false,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    smartSpeed: 1000,
-    navText: ["<i class='fa fa-chevron-right'></i>", "<i class='fa fa-chevron-left'></i>"],
-    responsive: {
-      0: {
-        items: 1.5
-      },
-      600: {
-        items: 2.5
-      },
-      800: {
-        items: 3
-      },
-      991: {
-        items: 4
-      },
-      1200: {
-        items: 4
-      }
-    }
-  });
-   const $creativitySection = $('.creativity');
-  if ($creativitySection.length) {
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            $(entry.target).addClass('is-visible');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.6,
-        rootMargin: '0px 0px -10% 0px'
-      });
-
-      observer.observe($creativitySection[0]);
-    } else {
-      $creativitySection.addClass('is-visible');
-    }
-  }
 });
+   
   
 // Advanced Mega Menu with Touch Support
 $(document).ready(function() {
@@ -495,3 +400,28 @@ document.head.appendChild(style);
                 e.stopPropagation();
             });
         });
+
+        // Map highlight on brand hover
+document.addEventListener('DOMContentLoaded', function() {
+    const brandItems = document.querySelectorAll('.brand-item[data-country]');
+    const mapPoints = document.querySelectorAll('.map-point[data-country]');
+
+    if (!brandItems.length || !mapPoints.length) return;
+
+    const clearActive = () => {
+        mapPoints.forEach(point => point.classList.remove('active'));
+    };
+
+    brandItems.forEach(item => {
+        const target = item.getAttribute('data-country');
+        item.addEventListener('mouseenter', () => {
+            clearActive();
+            const activePoint = document.querySelector(`.map-point[data-country="${target}"]`);
+            if (activePoint) {
+                activePoint.classList.add('active');
+            }
+        });
+
+        item.addEventListener('mouseleave', clearActive);
+    });
+});
