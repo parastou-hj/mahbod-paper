@@ -1,1068 +1,984 @@
 <!DOCTYPE html>
-<html lang="fa">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="./css/all.min.css">
+     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./style.css">
-    <title>مهبد کاغذ</title>
+    <title>مهر البرز</title>
 </head>
-
 <body>
-    <header class="neon-header">
-        <div class="container-fluid px-0 p-0 header-container py-lg-2">
-            <div class="row col-xl-11 header-top py-lg-2 px-lg-2 align-items-center">
-                <div
-                    class="col user-cart py-2 py-lg-0 d-flex align-items-center justify-content-between justify-content-md-end gap-3">
-                    <div class=" me-2 header-action  d-lg-none">
-
-                        <a href="" class="logo">
-                            <img src="/images/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="d-flex">
-                        <div class="cart me-2 header-action">
-                            <div class="cart-pill">
-                                <img src="./images/cart.png" alt="" class="cart-img">
-
-                            </div>
-                            <div class="cart-badge">
-                                <span>0</span>
-                            </div>
-                            <div class="cart-submenu">
-                                <div class="cart-header">
-                                    <h3 class="cart-title">سبد خرید شما</h3>
-                                    <span class="cart-items-count">2 محصول</span>
-                                </div>
-
-                                <div class="cart-items">
-                                    <div class="cart-item">
-                                        <div class="cart-item-image">
-                                            <img src="./images/pro-1.png">
-                                        </div>
-                                        <div class="cart-item-details">
-                                            <h4 class="cart-item-title">محصول 1</h4>
-                                            <div class="cart-item-price">
-                                                <span class="item-quantity">1 ×</span>
-                                                <span class="item-price">255,000</span>
-                                                <span class="price-currency">تومان</span>
-                                            </div>
-                                        </div>
-                                        <button class="remove-item-btn">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </div>
-                                    <div class="cart-item">
-                                        <div class="cart-item-image">
-                                            <img src="./images/pro-2.png">
-                                        </div>
-                                        <div class="cart-item-details">
-                                            <h4 class="cart-item-title"> محصول 2 </h4>
-                                            <div class="cart-item-price">
-                                                <span class="item-quantity">1 ×</span>
-                                                <span class="item-price">255,000</span>
-                                                <span class="price-currency">تومان</span>
-                                            </div>
-                                        </div>
-                                        <button class="remove-item-btn">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </div>
-
-
-
-                                </div>
-
-                                <div class="cart-footer">
-                                    <div class="cart-total">
-                                        <span class="total-label">مجموع:</span>
-                                        <div class="total-amount">
-                                            <span class="amount">600,000</span>
-                                            <span class="currency">تومان</span>
-                                        </div>
-                                    </div>
-                                    <div class="cart-actions">
-                                        <a href="#" class="view-cart-btn">مشاهده سبد خرید</a>
-                                        <a href="#" class="checkout-btn">تسویه حساب</a>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                            <!-- empty-cart -->
-                            <div class="empty-cart" style="display: none;">
-                                <div class="empty-cart-icon">
-                                    <i class="fa fa-shopping-basket"></i>
-                                </div>
-                                <p class="empty-cart-message">سبد خرید شما خالی است</p>
-
-                            </div>
-
-                        </div>
-                        <div class="user">
-                            <div class="user-btn">
-                                <img src="./images/user.png" alt="">
-                            </div>
-                            <div class="user-submenu">
-                                <div class="user-view">
-                                    <div class="user-submenu-header">
-                                        <div class="user-avatar">
-                                            <img src="./images/user.png" alt="عکس کاربر">
-                                        </div>
-                                        <div class="user-info">
-                                            <span class="user-name">علی محمدی</span>
-                                            <span class="user-email">ali@example.com</span>
-                                        </div>
-                                    </div>
-                                    <ul class="user-menu-list">
-                                        <li class="user-menu-item">
-                                            <a href="#">
-                                                <i class="fa fa-user"></i>
-                                                <span>پروفایل من</span>
-                                            </a>
-                                        </li>
-                                        <li class="user-menu-item">
-                                            <a href="#">
-                                                <i class="fa fa-shopping-bag"></i>
-                                                <span>سفارش‌های من</span>
-                                            </a>
-                                        </li>
-                                        <li class="user-menu-item">
-                                            <a href="#">
-                                                <i class="fa fa-heart"></i>
-                                                <span>علاقه‌مندی‌ها</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="user-menu-item logout">
-                                            <a href="#">
-                                                <i class="fa fa-sign-out"></i>
-                                                <span>خروج از حساب کاربری</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-
-                                <!-- login-required-state -->
-                                <div class="login-required-state" style="display: none;">
-
-                                    <h3 class="login-title">ورود به حساب کاربری</h3>
-                                    <p class="login-description">برای دسترسی به امکانات حساب کاربری، لطفاً وارد شوید.
-                                    </p>
-
-                                    <div class="login-actions">
-                                        <a href="#" class="login-primary-btn">
-                                            <i class="fa fa-sign-in-alt"></i>
-                                            <span>ورود</span>
-                                        </a>
-                                        <a href="#" class="register-secondary-btn">
-                                            <i class="fa fa-user-plus"></i>
-                                            <span>ثبت نام</span>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+    <header class="main-header">
+        <div class="container-fluid px-0">
+            <div class="row py-lg-2 py-lg-0">
+                
+                <div class="col-xl-4 col-lg-3 col-6 pt-0 logo-sec pt-lg-2 d-flex ">
+                     
+                    <a class="d-flex align-items-center">
+                        <img src="./images/logo1.png" alt="">
+                         <img src="./images/logo2.png" alt="">
+                    </a>
                 </div>
-            </div>
-             <div class=" header-down py-lg-2 px-lg-2 align-items-center">
-                <div class="row col-xl-11 mx-auto">
-                    <div class="col-12 user-cart py-2 py-lg-0 d-flex align-items-center justify-content-between">
-                        <div class="col-2 me-2 header-action ">
+                
+                <div class="col-xl-8 col-lg-9 col-6 px-0 pt-lg-4 nav-container"  >
+                  <div class="nav-sec px-0 d-flex align-items-center position-relative">
+                      <img src="./images/nav-back.png" alt="" class="nav-back">
+                    <ul class="nav pe-xxl-4 pe-xl-3 position-relative">
+                        <li class="has-megamenu" data-megamenu-target="#all-category">
+                            <a href="">محصولات</a>
+                        </li>
+                        <li>
+                            <a href="">طراحی و خدمات</a>
+                        </li>
+                        <li>
+                            <a href="">پشتیبانی پس ار فروش</a>
+                        </li>
+                        <li>
+                            <a href="">اخبار</a>
+                        </li>
+                        <li>
+                            <a href="">سوالات متداول</a>
+                        </li>
+                        <li>
+                            <a href="">مطالب آموزشی</a>
+                        </li>
+                        <li>
+                            <a href="">درباره ما</a>
+                        </li>
+                        <li>
+                            <a href="">تماس با ما</a>
+                        </li>
 
-                            <a href="" class="logo d-none d-lg-flex">
-                                <img src="/images/logo.png" alt="">
+                         
+
+
+                    </ul>
+                    <img src="./images/search.png" alt="" class="search me-3 d-none d-lg-inline">
+                       <div class="lang me-auto ms-lg-3">
+                        <img src="./images/lang.png" alt="" class="lang-img ms-1">
+                        <i class="fa fa-chevron-down"></i>
+                        <div class="lang-dropdown">
+                            <a href="#" class="lang-item active">
+                               
+                                <span>فارسی</span>
                             </a>
-                            <div class="mobile-menu-toggle d-lg-none">
-                                <button class="hamburger-btn" aria-label="منو">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-
+                            <a href="#" class="lang-item">
+                               
+                                <span>English</span>
+                            </a>
                         </div>
-                        <div class="col-lg-8 d-flex align-items-center nav-middle me-auto me-lg-0">
-                            <!-- Mobile Menu Toggle -->
-
-
-                            <nav class="primary-nav">
-                                <ul class="nav-list">
-                                    <li class="nav-item"><a href="" class="nav-link">صفحه اصلی</a></li>
-                                    <li class="nav-item has-mega-advanced">
-                                        <a href="" class="nav-link">محصولات</a>
-                                        <div class="mega-menu-advanced">
-                                            <div class="mega-inner-advanced">
-
-                                                <div class="mega-column-advanced">
-                                                    <h4>کاغذ و مقوا</h4>
-                                                    <ul class="mega-list">
-                                                        <li class="has-submenu">
-                                                            <a href="">
-                                                                <span>کاغذ تحریر</span>
-                                                                <i class="fa fa-angle-left"></i>
-                                                            </a>
-                                                            <ul class="mega-submenu">
-                                                                <li><a href="">کاغذ A4</a></li>
-                                                                <li><a href="">کاغذ A3</a></li>
-
-                                                            </ul>
-                                                        </li>
-                                                        <li class="has-submenu">
-                                                            <a href="">
-                                                                <span>مقوای ضخیم</span>
-                                                                <i class="fa fa-angle-left"></i>
-                                                            </a>
-                                                            <ul class="mega-submenu">
-                                                                <li><a href="">مقوای دوپلکس</a></li>
-                                                                <li><a href="">مقوای تریپلکس</a></li>
-
-                                                            </ul>
-                                                        </li>
-
-                                                    </ul>
+                    </div>
+                    <div class=" bar-menu justify-content-center align-items-center d-lg-none">
+                <i class="fa-solid fa-bars" ></i>
+               
+               </div>
+                 
+                    
+                    <div id="all-category" class="mega-menu" data-level="0">
+                        <!-- سطح اول: دسته‌بندی اصلی -->
+                        <div class="mega-menu-container" data-menu="main">
+                            <div class="mega-menu-sidebar">
+                                <div class="menu-tab" data-target="sand-lab" data-has-sub="true">
+                                    <span>تجهیزات آزمایشگاه ماسه</span>
+                                    <i class="fa fa-chevron-left"></i>
+                                </div>
+                                <div class="menu-tab" data-target="metallography">
+                                    <span>تجهیزات آزمایشگاه متالوگرافی</span>
+                                </div>
+                                <div class="menu-tab" data-target="grinders">
+                                    <span>آسیاب‌ها و خردکن‌ها</span>
+                                </div>
+                                <div class="menu-tab" data-target="ceramic-lab">
+                                    <span>تجهیزات آزمایشگاه سرامیک</span>
+                                </div>
+                            </div>
+                    
+                            <div class="mega-menu-content">
+                                <div class="content-item" data-content="sand-lab">
+                                    <a href="#"><span>تجهیزات آزمایشگاه ماسه</span></a>
+                                    <p>تجهیزات آزمایشگاه ماسه شامل انواع دستگاه‌های تراکم، تعیین دانسیته، و تجهیزات کنترل کیفیت مصالح دانه‌ای است.</p>
+                                <img src="./images/blog2.png" alt="">
+                                </div>
+                                <div class="content-item" data-content="metallography">
+                                    <a href="#"><span>تجهیزات آزمایشگاه متالوگرافی</span></a>
+                                    <p>تجهیزات متالوگرافی برای آماده‌سازی، پولیش، و بررسی ریزساختار فلزات به کار می‌روند.</p>
+                                 <img src="./images/blog2.png" alt="">
+                                </div>
+                                <div class="content-item" data-content="grinders">
+                                    <a href="#"><span>آسیاب‌ها و خردکن‌ها</span></a>
+                                    <p>آسیاب‌ها و خردکن‌ها ابزارهایی برای خردایش و آماده‌سازی نمونه‌های معدنی، سرامیکی و فلزی هستند.</p>
+                               <img src="./images/blog2.png" alt="">
+                                </div>
+                                <div class="content-item" data-content="ceramic-lab">
+                                    <a href="#"><span>تجهیزات آزمایشگاه سرامیک</span></a>
+                                    <p>این دسته شامل دستگاه‌های شکل‌دهی، پرس پودر، کوره‌های حرارتی، و ابزارهای تست خواص مکانیکی سرامیک‌هاست.</p>
+                                <img src="./images/blog2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- سطح دوم:   -->
+                        <div class="mega-menu-container" data-menu="sand-lab">
+                            <div class="mega-menu-sidebar">
+                                <button class="menu-back-btn">
+                                    <i class="fa fa-chevron-right"></i>
+                                    <span>بازگشت</span>
+                                </button>
+                                <div class="menu-tab" data-target="sand-density" data-has-sub="true">
+                                    <span>دستگاه تراکم ماسه</span>
+                                    <i class="fa fa-chevron-left"></i>
+                                </div>
+                                <div class="menu-tab" data-target="equipment">
+                                    <span>تجهیزات اندازه‌گیری</span>
+                                </div>
+                            </div>
+                    
+                            <div class="mega-menu-content">
+                                <div class="content-item" data-content="sand-density">
+                                    <a href="#"><span>دستگاه تراکم ماسه</span></a>
+                                    <p>دستگاه تراکم ماسه برای تعیین درصد تراکم و چگالی نسبی مصالح دانه‌ای استفاده می‌شود.</p>
+                                </div>
+                                <div class="content-item" data-content="equipment">
+                                    <a href="#"><span>تجهیزات اندازه‌گیری</span></a>
+                                    <p>تجهیزات اندازه‌گیری شامل ترازوهای دقیق، الک‌های استاندارد، و وسایل سنجش دانسیته هستند.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- سطح سوم: ‌  -->
+                        <div class="mega-menu-container" data-menu="sand-density">
+                            <div class="mega-menu-sidebar">
+                                <button class="menu-back-btn">
+                                    <i class="fa fa-chevron-right"></i>
+                                    <span>بازگشت</span>
+                                </button>
+                                <div class="menu-tab" data-target="density-model-a">
+                                    <span>دستگاه تراکم مدل A</span>
+                                </div>
+                                <div class="menu-tab" data-target="density-model-b">
+                                    <span>دستگاه تراکم مدل B</span>
+                                </div>
+                            </div>
+                    
+                            <div class="mega-menu-content">
+                                <div class="content-item" data-content="density-model-a">
+                                    <a href="#"><span>دستگاه تراکم مدل A</span></a>
+                                    <p>مدل A دارای سیستم دیجیتال، کنترل فشار خودکار و نمایشگر LCD است.</p>
+                                </div>
+                                <div class="content-item" data-content="density-model-b">
+                                    <a href="#"><span>دستگاه تراکم مدل B</span></a>
+                                    <p>مدل B از نوع مکانیکی با کاربری ساده‌تر برای مراکز آموزشی است.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-box-wrapper">
+                        <div class="search-box-container">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="search-box-content">
+                                            <button class="search-close-btn" id="closeSearch">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            
+                                            <form class="search-form" action="" method="GET">
+                                                <div class="search-input-wrapper">
+                                                    <input 
+                                                        type="text" 
+                                                        class="search-input" 
+                                                        placeholder="دنبال چه محصولی می‌گردید؟"
+                                                        name="search"
+                                                        id="searchInput"
+                                                    >
+                                                    <button type="submit" class="search-submit-btn">
+                                                        <i class="fa fa-search"></i>
+                                                        جستجو
+                                                    </button>
                                                 </div>
-
-
-                                                <div class="mega-column-advanced">
-                                                    <h4>ماشین آلات</h4>
-                                                    <ul class="mega-list">
-                                                        <li class="has-submenu">
-                                                            <a href="">
-                                                                <span>دستگاه چاپ</span>
-                                                                <i class="fa fa-angle-left"></i>
-                                                            </a>
-                                                            <ul class="mega-submenu">
-                                                                <li><a href="">چاپ افست</a></li>
-
-                                                            </ul>
-                                                        </li>
-
-
-                                                    </ul>
-                                                </div>
-
-
-                                                <div class="mega-column-advanced">
-                                                    <h4>مواد مصرفی</h4>
-                                                    <ul class="mega-list">
-                                                        <li class="has-submenu">
-                                                            <a href="">
-                                                                <span>چسب و رزین</span>
-                                                                <i class="fa fa-angle-left"></i>
-                                                            </a>
-                                                            <ul class="mega-submenu">
-                                                                <li><a href="">چسب سفید</a></li>
-
-                                                            </ul>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                            </form>
+                                            
+                                         
                                         </div>
-                                    </li>
-                                    <li class="nav-item  about-dropdown">
-                                        <a href="" class="nav-link">درباره ما</a>
-                                        <ul class=" about-submenu">
-                                            <li><a href="#" class="about-link">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                                    <span>تاریخچه مهبد</span>
-                                                </a></li>
-                                            <li><a href="#" class="about-link">
 
-                                                    <span>تیم مدیریت</span>
-                                                </a></li>
-                                            <li><a href="#" class="about-link">
 
-                                                    <span>افتخارات و جوایز</span>
-                                                </a></li>
+                  </div>
+                    
 
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="" class="nav-link">خدمات</a></li>
-                                    <li class="nav-item"><a href="" class="nav-link">فرصت های شغلی</a></li>
-                                    <li class="nav-item"><a href="" class="nav-link">تماس با ما</a></li>
-                                </ul>
-                            </nav>
-                            <div class="nav-search">
-                                <button class="search-toggle" aria-label="جستجو">
-                                    <img src="/images/search.png" alt="">
+                </div>
+                 <div class="col-12 search-res px-0 d-lg-none">
+                    <div class="search-box-wrapper">
+    <div class="search-box-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <div class="search-box-content">
+                        <button class="search-close-btn" id="closeSearch">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        
+                        <form class="search-form" action="" method="GET">
+                            <div class="search-input-wrapper">
+                                <input 
+                                    type="text" 
+                                    class="search-input" 
+                                    placeholder="دنبال چه محصولی می‌گردید؟"
+                                    name="search"
+                                    id="searchInput"
+                                >
+                                <button type="submit" class="search-submit-btn">
+                                    <i class="fa fa-search"></i>
+                                    
                                 </button>
-                                <div class="search-box">
-                                    <input type="text" placeholder="چی میخوای پیدا کنی؟">
-                                    <button type="button" class="search-submit"><i class="fa fa-search"></i></button>
-                                </div>
                             </div>
-
-                        </div>
-                        <div class="col-lg-2 d-flex justify-content-end">
-                            <a class="store-btn" href="">فروشگاه</a>
-                        </div>
+                        </form>
+                        
+                     
                     </div>
-
-
                 </div>
             </div>
-           
-
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
         </div>
 
-        <div class="mobile-sidebar" id="mobileSidebar">
-            <div class="mobile-sidebar-header">
-                <h3>منو</h3>
-                <button class="mobile-close-btn" id="mobileCloseBtn">
-                    <i class="fas fa-times"></i>
-                </button>
+        <div class="off-canvas">
+            <div class="off-canvas-header d-flex justify-content-between">
+              <span>منوی دسترسی</span>
+              <div class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
             </div>
-
-
-            <!-- Mobile Navigation -->
-            <ul class="mobile-nav">
-                <li class="mobile-nav-item">
-                    <a href="#" class="mobile-nav-link">
-                        <span>صفحه اصلی</span>
-                    </a>
-                </li>
-
-
-
-                <li class="mobile-nav-item has-submenu">
-                    <a href="#" class="mobile-nav-link" data-megamenu="classes">
-                        <span>محصولات </span>
-                        <i class="fas fa-chevron-down mobile-nav-icon"></i>
-                    </a>
-
-                    <div class="mobile-megamenu" id="classes-megamenu">
-
-
-                        <div class="mobile-megamenu-category">
-                            <div class="mobile-category-header" data-category="paper">
-                                <span>کاغذ و مقوا</span>
-                                <i class="fas fa-chevron-down mobile-category-icon"></i>
-                            </div>
-                            <div class="mobile-category-content" id="paper-content">
-
-                                <div class="mobile-category-item">
-                                    <a href="#" class="mobile-category-link">کاغذ تحریر A4</a>
-                                </div>
-
-                                <div class="mobile-category-item">
-                                    <a href="#" class="mobile-category-link">کاغذ تحریر A3</a>
-                                </div>
-
-                                <div class="mobile-category-item">
-                                    <a href="#" class="mobile-category-link">مقوای دوپلکس</a>
-                                </div>
-
-                                <div class="mobile-category-item">
-                                    <a href="#" class="mobile-category-link">مقوای تریپلکس</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="mobile-megamenu-category">
-                            <div class="mobile-category-header" data-category="machines">
-                                <span>ماشین آلات</span>
-                                <i class="fas fa-chevron-down mobile-category-icon"></i>
-                            </div>
-                            <div class="mobile-category-content" id="machines-content">
-
-                                <div class="mobile-category-item">
-                                    <a href="#" class="mobile-category-link">دستگاه چاپ افست</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="mobile-megamenu-category">
-                            <div class="mobile-category-header" data-category="materials">
-                                <span>مواد مصرفی</span>
-                                <i class="fas fa-chevron-down mobile-category-icon"></i>
-                            </div>
-                            <div class="mobile-category-content" id="materials-content">
-
-                                <div class="mobile-category-item">
-                                    <a href="#" class="mobile-category-link">چسب سفید</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </li>
-                <li class="mobile-nav-item has-submenu">
-                    <a href="#" class="mobile-nav-link" data-submenu="about">
-                        <span>درباره ما </span>
-                        <i class="fas fa-chevron-down mobile-nav-icon"></i>
-                    </a>
-                    <ul class="mobile-submenu" id="about-submenu">
-                        <li class="mobile-submenu-item">
-                            <a href="#" class="mobile-submenu-link">تاریخچه شرکت</a>
-                        </li>
-                        <li class="mobile-submenu-item">
-                            <a href="#" class="mobile-submenu-link">چشم انداز و اهداف</a>
-                        </li>
-
-                </li>
-            </ul>
-            </li>
-
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">
-                    <span> خدمات</span>
+            <div class="off-canvas-nav">
+              <div class="off-canvas-item">
+                <a href="#">صفحه اصلی</a>
+              </div>
+              <div class="off-canvas-item has-submenu">
+                <a href="#" class="category-btn">
+                  <span> محصولات</span>
+                 
                 </a>
-            </li>
-
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">
-                    <span> فرصت های شغلی</span>
-                </a>
-            </li>
-
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">
-                    <span>تماس با ما</span>
-                </a>
-            </li>
-
-
-            </ul>
-
-
-
-
-        </div>
-        <!-- Overlay for mobile menu -->
-        <div class="mobile-overlay"></div>
-    </header>
-
-    <main class="body-content">
-        <section class="slider position-relative">
-            <div class="owl-carousel owl-theme slider-owl px-0">
-                <div class="baner-item position-relative">
-                    <a href="">
-                        <video class="video" muted playsinline>
-                            <source src="/sample-video.mp4" type="video/mp4">
-
-                        </video>
-                        <div class="slider-shapes">
-                            <div class="n1">
-                                <img src="/images/slider-shap1.png" alt="">
-                            </div>
-                            <div class="n2">
-                                <img src="/images/slider-shap2.png" alt="">
-                            </div>
-                            <div class="n3">
-                                <img src="/images/slider-shap3.png" alt="">
-                            </div>
-                            <div class="n4">
-                                <img src="/images/slider-shap4.png" alt="">
-                            </div>
-                        </div>
-                        <div class="baner-txt">
-                            <h1>
-                                From Paper to Reality...
-                            </h1>
-                            <h2>
-                                Screen printing technology brings new ideas to manufacturing
-                            </h2>
-                            <div class="store-btn baner-btn" href="">فروشگاه</div>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-            <a href="#creativity-section" class="fleshh">
-                <span class="flesh"> <i class="fa-solid fa-down-long "></i></span>
-            </a>
-
-
-        </section>
-        <section class="container-fluid px-0 creativity py-lg-5 py-2" id="creativity-section">
-            <div class="row col-xl-11 py-5 ps-lg-5 creativity-content">
-                <div class="col-12 creativity-heading">
-                    <h1>
-                        FROM PAPER TO MASTERPIECE !
-                    </h1>
-                </div>
-                <div class="col-lg-6 cre-txt creativity-text">
-                    <h1>هر خلاقیتی با یک کاغذ سفید شروع میشه !</h1>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ روزنامه و مجله در ستون و سطرآنچنان که
-                        لازم است
-                    </p>
-                    <p class="text-mute line">
-                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                        کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
-                        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-                        فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود
-                    </p>
-                    <a href="#" class="more-link d-flex align-items-center">
-
-                        <span>بیشتر بخوانید</span>
-                        <div class="more-btn">
-                            <img src="/images/more.png" alt="">
-                        </div>
-                    </a>
-
-                </div>
-                <div class="col-lg-6 position-relative py-5 creativity-visual">
-                    <div class="anim-img  ">
-                        <img src="/images/anim1.png" alt="" class="anim1 img-fluid">
-                        <img src="/images/anim2.png" alt="" class="anim2 img-fluid">
-                        <img src="/images/anim3.png" alt="" class="anim3 img-fluid">
-                        <img src="/images/anim4.png" alt="" class="anim4 img-fluid">
-                        <img src="/images/anim5.png" alt="" class="anim5 img-fluid">
-                        <img src="/images/anim6.png" alt="" class="anim6 img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="category container-fluid px-0 py-lg-5 px-0 position-relative ">
-            <img src="/images/cat-shap.png" alt="" class="cat-shape">
-            <div class="row col-xl-11 d-flex ">
-                <div class="d-flex flex-lg-row flex-column justify-content-center align-items-center">
-                    <div class="cat-col position-relative mb-3">
-                        <a href="">
-                            <img src="/images/cat1.png" alt="" class="cat-back img-fluid">
-                            <div class="cat-content">
-                                <img src="/images/cat-img.png" alt="">
-                                <h1>مقوا</h1>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span>لورم ایپسوم متن ساختگی از صنعت</span>
-                                    <img src="/images/cat-flesh.png" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cat-col position-relative mb-3">
-                        <a href="">
-                            <img src="/images/cat2.png" alt="" class="cat-back  img-fluid">
-                            <div class="cat-content">
-                                <img src="/images/cat-img2.png" alt="">
-                                <h1>مقوا</h1>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span>لورم ایپسوم متن ساختگی از صنعت</span>
-                                    <img src="/images/cat-flesh.png" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cat-col position-relative mb-3">
-                        <a href="">
-                            <img src="/images/cat3.png" alt="" class="cat-back  img-fluid">
-                            <div class="cat-content">
-                                <img src="/images/cat-img3.png" alt="">
-                                <h1>مقوا</h1>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span>لورم ایپسوم متن ساختگی از صنعت</span>
-                                    <img src="/images/cat-flesh.png" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row most-sale col-xl-11">
-                <div class="most-sec">
-                    <h1>پرفروش ترین محصولات</h1>
-                    <div class="owl-carousel owl-theme most-sale-owl">
-                        <div class="p-3">
-                            <div class="most-item">
-                                <a href="">
-                                    <img src="/images/pro-1.png" alt="">
-                                    <h1>
-                                        پرس وکیوم آسانسوری
-                                    </h1>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="p-3">
-                            <div class="most-item">
-                                <a href="">
-                                    <img src="/images/pro-2.png" alt="">
-                                    <h1>
-                                        پرس وکیوم آسانسوری
-                                    </h1>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="p-3">
-                            <div class="most-item">
-                                <a href="">
-                                    <img src="/images/pro-3.png" alt="">
-                                    <h1>
-                                        پرس وکیوم آسانسوری
-                                    </h1>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="p-3">
-                            <div class="most-item">
-                                <a href="">
-                                    <img src="/images/pro-4.png" alt="">
-                                    <h1>
-                                        پرس وکیوم آسانسوری
-                                    </h1>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="movie container-fluid px-0 ">
-            <div class="row col-xl-11">
-                <div class="movie-wrapper">
-                    <!-- Video Background -->
-                    <video class="movie-video" autoplay muted loop playsinline>
-                        <source src="/sample-video.mp4" type="video/mp4">
-
-                    </video>
-
-                    <!-- Mask Image -->
-                    <!-- <div class="movie-mask">
-                <img src="/images/mahbod.png" alt="Mahbod">
-            </div> -->
-
-                    <!-- Optional: Play/Pause Button -->
-                    <button class="video-control" aria-label="توقف/پخش ویدیو">
-                        <img src="/images/control.png" alt="">
+                <div class="submenu level-1">
+                  <div class="submenu-header">
+                    <button class="back-btn">
+                      <i class="fa-solid fa-chevron-right"></i>
+                      <span>بازگشت</span>
                     </button>
-                </div>
-            </div>
-        </section>
-        <div class="neon-sec container-fluid px-0 position-relative">
-            <img src="/images/neon-overlay.png" alt="" class="neon-overlay">
-            <div class="row col-xl-11  position-relative">
-
-                <div class="col-lg-6 ps-lg-5">
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد.
-                    </p>
-                    <div>
-                        <a href="#" class="more-link d-flex align-items-center">
-
-                            <span> مشاهده محصولات</span>
-                            <div class="more-btn">
-                                <img src="/images/more.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 neon-sec-img-col ">
-                    <img src="/images/neon-sec-img.png" alt="" class="neon-sec-img">
-                </div>
-                <div class="col-12 ">
-                    <div class="news-items-viewport">
-                        <div class="news-items-wrapper">
-
-                            <div class="news-content-block">
-                                <img src="/images/neon-txt.png" alt="" class="neon-matn">
-                                <img src="/images/neon-txt.png" alt="" class="neon-matn">
-                                <img src="/images/neon-txt.png" alt="" class="neon-matn">
-                            </div>
-                            <div class="news-content-block">
-                                <img src="/images/neon-txt.png" alt="" class="neon-matn">
-                                <img src="/images/neon-txt.png" alt="" class="neon-matn">
-                                <img src="/images/neon-txt.png" alt="" class="neon-matn">
-                            </div>
-
-
+                  </div>
+                  <div class="submenu-items">
+                    <div class="submenu-item has-submenu">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته اول</span>
+                        
+                      </a>
+                      <div class="submenu level-2">
+                        <div class="submenu-header">
+                          <button class="back-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>بازگشت</span>
+                          </button>
+                          <span>دسته اول</span>
                         </div>
+                        <div class="submenu-items">
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 1-1</a>
+                          </div>
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 1-2</a>
+                          </div>
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 1-3</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <div class="submenu-item has-submenu">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته دوم</span>
+                        
+                      </a>
+                      <div class="submenu level-2">
+                        <div class="submenu-header">
+                          <button class="back-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>بازگشت</span>
+                          </button>
+                          <span>دسته دوم</span>
+                        </div>
+                        <div class="submenu-items">
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 2-1</a>
+                          </div>
+                          <div class="submenu-item">
+                            <a href="#">زیردسته 2-2</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="submenu-item">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته سوم</span>
+                      </a>
+                    </div>
+                    <div class="submenu-item">
+                      <a href="#" class="subcategory-btn">
+                        <span>دسته چهارم</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="off-canvas-item">
+                <span>درباره ما</span>
+               
+              </div>
+              
+              <div class="off-canvas-item">
+                <span>همکاری با ما</span>
+               
+              </div>
+              <div class="off-canvas-item">
+                <a href="#"> اخبار و رویدادها</a>
+              </div>
+              <div class="off-canvas-item">
+                <a href="#">تماس با ما</a>
+              </div>
             </div>
+          </div>
+        
 
+
+
+
+    </header>
+    <main class="body-content">
+        <div class="container-fluid baner-top px-0 mt-lg-2 mt-1">
+           <div class="row px-0">
+            <img src="./images/baner-top.png" alt="">
+           </div>
+        </div>
+        <div class="baner-sec container-fluid px-0 mt-lg-3 mt-2">
+           <div class="row px-0">
+             <div class="owl-carousel owl-theme baner-owl px-0">
+                <div class="baner-item">
+                   <a href="">
+                     <img src="./images/baner-bottom.png" alt="">
+                   </a>
+                </div>
+                  <div class="baner-item">
+                   <a href="">
+                     <img src="./images/baner-bottom.png" alt="">
+                   </a>
+                </div>
+             </div>
+           </div>
+        </div>
+        <div class="about-sec container-fluid px-0 ">
+           <div class="row">
+             <div class="col-lg-6 position-relative pt-5 about-txt">
+                <img src="./images/about-back.png" alt="" class="about-back">
+                <h3 class="mb-3">درباره مهندسی صنعت سرام</h3>
+                <h4>تولید کننده تجهیزات صنایع سرامیک و متالوژی</h4>
+                <p class="mt-lg-5 mt-4">
+                   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                </p>
+                  <a href="" class="d-flex align-items-center mt-5 more">
+                         <button class="more-btn">
+                        <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <span class="btn-label me-2">بیشتر بخوانید</span>
+                       </a>
+            </div>
+            <div class="col-lg-6 position-relative">
+                <img src="./images/about-img.png" alt="" class="about-img d-none d-lg-block">
+            </div>
+           </div>
 
         </div>
-        <div class="container-fluid px-0 position-relative map-sec">
-            <img src="/images/map-overlay.png" alt="" class="map-overlay">
-            <div class="row col-xl-11   py-5 ">
-                <div class="map-overlay">
-
-                </div>
-                <div class="col-lg-6 map-txt d-flex flex-column justify-content-center mb-3 mb-lg-0 ">
-                    <h1>شرکای تجاری مهبد</h1>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و شرایط سخت تایپ به پایان رسد.
-                    </p>
-
-                </div>
-                <div class="col-lg-6 map-img text-center text-lg-left position-relative">
-                    <div class="map-wrapper position-relative d-inline-block">
-                        <img src="/images/map.png" alt="" class="img-fluid">
-                        <img class="map-point" data-country="iran"
-                            style="top: 52%; left: 58%; " src="/images/iran.png" >
-                        <img class="map-point" data-country="turkey"
-                            style="top: 47%; left: 53%; "  src="/images/italy.png">
-                        <img class="map-point" data-country="usa"
-                            style="top: 48%; left: 24%; " src="/images/usa.png">
-                        <img class="map-point" data-country="brazil"
-                            style="top: 66%; left: 30%; " src="/images/brazil.png">
-                        <img class="map-point" data-country="germany"
-                            style="top: 44%; left: 49%; " src="/images/germany.jpg">
-                        <img class="map-point" data-country="japan"
-                            style="top: 50%; left: 78%" src="/images/japan.jpg" >
+        <div class="category-sec container-fluid my-5">
+            <div class="row">
+                <h2>دسته بندی محصولات صنعتی سرام</h2>
+            </div>
+            <div class="row col-xl-11 mt-5">
+                <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item ">
+                   <a href="" class=" d-flex flex-column align-items-center">
+                     <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat1.png" alt="" >
                     </div>
-
+                    <h1>
+                        تجهیزات سرامیک هنری
+                    </h1>
+                   </a>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <a href="" class=" d-flex flex-column align-items-center">
+                        <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat2.png" alt="" >
+                    </div>
+                    <h1>
+                        کوره های الکتریکی
+                    </h1>
+                    </a>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat3.png" alt="" >
+                    </div>
+                    <h1>
+                          آسیاها و خردکن ها
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat4.png" alt="" >
+                    </div>
+                    <h1>
+                        تجهیزات  آزمایشگاه متالوگرافی
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat5.png" alt="">
+                    </div>
+                    <h1>
+                          خشک کن های الکتریکی
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat6.png" alt="" >
+                    </div>
+                    <h1>
+                        تجهیزات  آزمایشگاه ماسه
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat7.png" alt="" >
+                    </div>
+                    <h1>
+                        تجهیزات تولید قطعات سرامیکی و مظروف
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat8.png" alt="" >
+                    </div>
+                    <h1>
+                        کوره های گازی و گازوئیلی
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat9.png" alt="" >
+                    </div>
+                    <h1>
+                           همزن و میکسرها
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat10.png" alt="" >
+                    </div>
+                    <h1>
+                           الک شیکرها
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat6.png" alt="" >
+                    </div>
+                    <h1>
+                        تجهیزات  آزمایشگاه متالوژی مکانیکی
+                    </h1>
+                   </div>
+                </div>
+                 <div class="col-lg-2 col-sm-3 col-4 d-flex justify-content-center mb-4">
+                   <div class="cat-item d-flex flex-column align-items-center ">
+                    <div class="cat-img position-relative d-flex align-items-center">
+                         <img src="./images/cat-back.png" alt="" class="cat-back">
+                        <img src="./images/cat6.png" alt="" >
+                    </div>
+                    <h1>
+                        تجهیزات  آزمایشگاه کاشی و سرامیک
+                    </h1>
+                   </div>
                 </div>
             </div>
-            <section class=" brands-sec row col-xl-11 container-fluid px-0 py-lg-5 px-0">
-                <div class="owl-carousel owl-theme owl-brands px-0">
-                    <div class="p-3">
-                        <div class="brand-item" data-country="iran">
-                            <a href="">
-                                <img src="/images/brand1.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <div class="brand-item" data-country="turkey">
-                            <a href="">
-                                <img src="/images/brand2.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <div class="brand-item" data-country="usa">
-                            <a href="">
-                                <img src="/images/brand3.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <div class="brand-item" data-country="germany">
-                            <a href="">
-                                <img src="/images/brand4.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <div class="brand-item" data-country="japan">
-                            <a href="">
-                                <img src="/images/brand5.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <div class="brand-item" data-country="brazil">
-                            <a href="">
-                                <img src="/images/brand6.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-            </section>
         </div>
-
-        <section class="news container-fluid px-0">
+        <div class="blog-sec container-fluid px-0 py-lg-5 py-4">
             <div class="row col-xl-11">
+                <div class="title-sec d-flex justify-content-between align-items-center">
+                    <h3>آخرین مقالات</h3>
+                     <a href="" class="d-flex align-items-center mt-lg-5 more">
+                         <button class="more-btn">
+                        <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <span class="btn-label me-2">مشاهده آرشیو</span>
+                       </a>
+
+                </div>
+            </div>
+            <div class="row col-xl-11 my-lg-5 my-3">
                 <div class="col-lg-6">
-                    <div class="news-section">
-                        <div class="section-header">
-                            <p class="section-subtitle">اخبار</p>
-                            <h2 class="section-title">آخرین اخبار</h2>
-                        </div>
-
-                        <div class="news-items">
-                            <div class="news-item">
-                                <a href="">
-                                    <h4 class="news-title">کوه WKS، ارائه‌دهنده خدمات چاپ و رسانه، بار دیگر بر روی
-                                        فناوری پیشرفته هایدلبرگ سرمایه‌گذاری می‌کند</h4>
-
-                                </a>
-                            </div>
-
-                            <div class="news-item">
-                                <a href="">
-                                    <h4 class="news-title">کوه WKS، ارائه‌دهنده خدمات چاپ و رسانه، بار دیگر بر روی
-                                        فناوری پیشرفته هایدلبرگ سرمایه‌گذاری می‌کند</h4>
-
-                                </a>
-                            </div>
-                        </div>
-
-                        <a href="#" class="more-link d-flex align-items-center">
-
-                            <span>بیشتر بخوانید</span>
-                            <div class="more-btn">
-                                <img src="/images/more.png" alt="">
-                            </div>
-                        </a>
-
-                    </div>
+                  <div class="blog-card position-relative mb-3">
+   <a href="">
+     <img src="./images/blog-big.png" alt="" class="blog-back">
+     <div class="blog-txt">
+        <h1>راهکارهای صنعت سرام در ناترازی؛ از حرف به عمل</h1>
+        <div class="blog-footer">
+            <span class="blog-date">6 مهر 1404</span>
+            <button class="blog-read-more">ادامه مطلب</button>
+        </div>
+     </div>
+   </a>
+</div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="news-section">
-                        <div class="section-header">
-                            <p class="section-subtitle">اخبار</p>
-                            <h2 class="section-title">آخرین مقالات</h2>
+                    <div class="blog-card position-relative mb-3">
+   <a href="">
+     <img src="./images/blog2.png" alt="" class="blog-back">
+     <div class="blog-txt">
+        <h1>راهکارهای صنعت سرام در ناترازی؛ از حرف به عمل</h1>
+        <div class="blog-footer">
+            <span class="blog-date">6 مهر 1404</span>
+            <button class="blog-read-more">ادامه مطلب</button>
+        </div>
+     </div>
+   </a>
+</div>
+<div class="blog-card position-relative mb-3">
+   <a href="">
+     <img src="./images/blog2.png" alt="" class="blog-back">
+     <div class="blog-txt">
+        <h1>راهکارهای صنعت سرام در ناترازی؛ از حرف به عمل</h1>
+        <div class="blog-footer">
+            <span class="blog-date">6 مهر 1404</span>
+            <button class="blog-read-more">ادامه مطلب</button>
+        </div>
+     </div>
+   </a>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="services mb-5  container-fluid px-0 position-relative d-flex text-center justify-content-center align-items-center">
+              <img src="./images/services-back.png" alt="" class="services-back"> 
+            
+            <div class="row">
+                 <div class="service-txt position-relative">
+                    <h3>ارائه خدمــــــات پـــــس از فــــروش</h3>
+                    <p>تیم پشتیبانی ما همواره آماده پشتیبانی و ارائه خدمات هستند</p>
+                    <a href="">
+                        بیشتر بخوانید
+                        <img src="./images/services-flesh.png" alt="">
+                    </a>
+                 </div>
+            </div>
+        </div>
+        <div class="brands container-fluid my-lg-5">
+            <div class="row col-xl-11">
+                <div class="col-md-8">
+                   <div class="brands-content">
+            <h3>برخی از مشتریانی که ما افتخار همکاری با آنان را داشته ایم...</h3>
+            
+            <!-- گرید برندها -->
+            <div class="brands-items">
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand1.png" alt="برند 1">
+                    </a>
+                </div>
+                
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand2.png" alt="برند 2">
+                    </a>
+                </div>
+                
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand1.png" alt="برند 3">
+                    </a>
+                </div>
+                
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand3.png" alt="برند 4">
+                    </a>
+                </div>
+                
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand5.png" alt="برند 5">
+                    </a>
+                </div>
+                
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand1.png" alt="برند 6">
+                    </a>
+                </div>
+                
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand5.png" alt="برند 7">
+                    </a>
+                </div>
+                
+                <div class="brand-item">
+                    <a href="">
+                        <img src="./images/brand6.png" alt="برند 8">
+                    </a>
+                </div>
+            </div>
+        </div>
+                
+                </div>
+                <div class="col-md-4 brand-carousel-sec mt-5 mt-lg-0 ">
+                    <div class="brand-carosuel position-relative">
+                        <div class="owl-carousel owl-theme brand-owl">
+                            <div class="brand-card p-1">
+                                <div class="brand-carousel-item text-center">
+                               <a href="">
+                                 <div class="brand-img">
+                                    <img src="./images/brand-carousel.png" alt="">
+                                </div>
+                                <div class="brand-carosuel-txt mt-3">
+                                    <h4>تولید کننده تجهیزات صنایع سرامیک</h4>
+                                </div>
+                               </a>
+                            </div>
+                            </div>
+                            <div class="brand-card p-1">
+                                <div class="brand-carousel-item text-center">
+                               <a href="">
+                                 <div class="brand-img">
+                                    <img src="./images/brand-carousel.png" alt="">
+                                </div>
+                                <div class="brand-carosuel-txt">
+                                    <h4>تولید کننده تجهیزات صنایع سرامیک</h4>
+                                </div>
+                               </a>
+                            </div>
+                            </div>
+
                         </div>
-
-                        <div class="news-items">
-                            <div class="news-item">
-                                <a href="">
-                                    <h4 class="news-title">کوه WKS، ارائه‌دهنده خدمات چاپ و رسانه، بار دیگر بر روی
-                                        فناوری پیشرفته هایدلبرگ سرمایه‌گذاری می‌کند</h4>
-
-                                </a>
-                            </div>
-
-                            <div class="news-item">
-                                <a href="">
-                                    <h4 class="news-title">کوه WKS، ارائه‌دهنده خدمات چاپ و رسانه، بار دیگر بر روی
-                                        فناوری پیشرفته هایدلبرگ سرمایه‌گذاری می‌کند</h4>
-
-                                </a>
-                            </div>
-                        </div>
-
-                        <a href="#" class="more-link d-flex align-items-center">
-
-                            <span>بیشتر بخوانید</span>
-                            <div class="more-btn">
-                                <img src="/images/more.png" alt="">
-                            </div>
-                        </a>
-
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="percent-sec d-flex  py-2 py-sm-0">
+        </div>
+        <div class="catalog-sec mt-5 container-fluid">
+           
+            <div class="row col-lg-6">
+                 <div class="section-header position-relative">
+                    <img src="./images/catalog.png" alt="">
+                    <h2 class="section-title"> 
+                        بـــا ما بــی نظیـــر شویــــد
+                    </h2>
+                    <a class="d-flex align-items-center  mt-3  position-relative more">
+                        <button class="more-btn">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <span class="btn-label mt-2 me-3 ">دانلود کاتالوگ محصولات</span>
+                        
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <section class="percent-sec d-flex align-items-center mt-5 py-5" style="background-image: url(./images/percent-back.png);">
             <!-- <img src="./images/body-back.png" alt=""> -->
-            <div class="container-fluid px-0 px-0">
+            <div class="container-fluid px-0">
                 <div class="row col-xl-11 justify-content-center">
-                    <div class="px-lg-3 px-0 percents d-lg-flex justify-content-between d-none">
-
-
-                        <div class="percent-item">
-                            <span>20%</span>
-                            <p>سهم از بازار بهره برداری</p>
-                        </div>
-                        <div class="percent-item">
-                            <span>352</span>
-                            <p>پروژه های انجام شده </p>
-                        </div>
-                        <div class="percent-item">
-                            <img src="/images/percent-img.png" alt="">
-                        </div>
-                        <div class="percent-item">
-                            <span>72</span>
-                            <p>محصولات</p>
-                        </div>
-                        <div class="percent-item">
-                            <span>34%</span>
-                            <p>مزایده</p>
-                        </div>
+                   <div class="col-xl-10 percents d-flex justify-content-between">
+                    <div class="percent-item">
+                        <span>20%</span>
+                        <p>سهم از بازار بهره برداری</p>
                     </div>
-
-                    <!---------prcent-sec-mobile-->
-                    <div class="px-3 percents d-flex flex-column justify-content-between d-lg-none pt-3">
-
-
-                        <div class="d-flex">
-                            <div class="percent-item">
-                                <span>20%</span>
-                                <p>سهم از بازار بهره برداری</p>
-                            </div>
-                            <div class="percent-item">
-                                <span>352</span>
-                                <p>پروژه های انجام شده </p>
-                            </div>
-                        </div>
-                        <div class="percent-item d-flex align-items-center img-per ">
-                            <img src="/images/percent-img.png" alt="" class="percent-img">
-                        </div>
-                        <div class="d-flex">
-                            <div class="percent-item">
-                                <span>72</span>
-                                <p>محصولات</p>
-                            </div>
-                            <div class="percent-item">
-                                <span>34%</span>
-                                <p>مزایده</p>
-                            </div>
-                        </div>
+                     <div class="percent-item">
+                        <span>352</span>
+                         <p>پروژه های انجام شده </p>
                     </div>
+                     <div class="percent-item">
+                        <span>72</span>
+                        <p>محصولات</p>
+                    </div>
+                    
+                     <div class="percent-item">
+                        <span>34%</span>
+                        <p>مزایده و مناقصه</p>
+                    </div>
+                   </div>
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="container-fluid px-0 f-top-sec pb-5">
-                <div class="row col-xl-11">
-                    <div class=" px-lg-5 px-0">
-                        <div class="footer-top d-flex">
-                            <div class="f-t-item ">
-                                <div class="ft-img">
-                                    <img src="/images/post.png" alt="">
-                                </div>
-                                <div class="ft-txt">
-                                    <span>به لیست پستی ما بپیوندید</span>
-                                    <img src="/images/ft-flesh.png" alt="">
-                                </div>
-                            </div>
-                            <div class="f-t-item">
-                                <div class="ft-img">
-                                    <img src="/images/catalog.png" alt="">
-                                </div>
-                                <div class="ft-txt">
-                                    <span>دانلود کاتالوگ</span>
-                                    <img src="/images/ft-flesh.png" alt="">
-                                </div>
-                            </div>
-                            <div class="f-t-item">
-                                <div class="ft-img">
-                                    <img src="/images/consul.png" alt="">
-                                </div>
-                                <div class="ft-txt">
-                                    <span>درخواست مشاوره</span>
-                                    <img src="/images/ft-flesh.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row col-xl-11">
-                    <div class="footer-middle">
-                        <div class="footer-column text-center text-lg-start mb-4 mb-lg-0 logo-footer">
-
-                            <img src="/images/footer-logo.png" alt="">
-                        </div>
-
-                        <div class="footer-column">
-                            <input type="checkbox" id="why-toggle" class="accordion-toggle">
-                            <label for="why-toggle" class="accordion-label">
-                                <h4>درباره ما </h4>
-                            </label>
-                            <ul class="footer-links">
-                                <li><a href="#">اخبار و رسانه</a></li>
-                                <li><a href="#">برندها</a></li>
-                                <li><a href="#">چشم انداز</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="footer-column">
-                            <input type="checkbox" id="popular-toggle" class="accordion-toggle">
-                            <label for="popular-toggle" class="accordion-label">
-                                <h4> محصولات</h4>
-                            </label>
-                            <ul class="footer-links">
-                                <li><a href="#">مقوا </a></li>
-                                <li><a href="#">ماشین آلات </a></li>
-                                <li><a href="#"> مواد اولیه</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="footer-column">
-                            <input type="checkbox" id="links-toggle" class="accordion-toggle">
-                            <label for="links-toggle" class="accordion-label">
-                                <h4>لینک های مرتبط</h4>
-                            </label>
-                            <ul class="footer-links">
-                                <li><a href="#"> دانلود کاتالوگ ها</a></li>
-                                <li><a href="#">پیش فاکتور </a></li>
-
-
-                            </ul>
-                        </div>
-                        <div class="footer-column">
-                            <input type="checkbox" id="links-toggle" class="accordion-toggle">
-                            <label for="links-toggle" class="accordion-label">
-                                <h4> دسترسی سریع</h4>
-                            </label>
-                            <ul class="footer-links">
-                                <li><a href="#">فرصت شغلی</a></li>
-                                <li><a href="#">سرمایه گزاران </a></li>
-                                <li><a href="#">شرکت های گروه</a></li>
-
-                            </ul>
-                        </div>
-
-
-
-
-
-
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid px-0 footer-bottom py-5">
-                <div class="row col-xl-11">
-                    <div class="col-lg-6">
-                        <div class="footer-rights mb-2">
-                            <span>©کلیه حقوق این وب سایت متعلق به
-                                <a class="company"> مهبد کاغذ فردا</a> می باشد.</span>
-                        </div>
-                        <div class="footer-rights eng-company mt-md-0 mt-2">
-                            <span>website designed by
-                                <span class="nonegar">NONEGAR PARDAZESH</span>, developed by
-                                <span class="nonegar">NONEGAR</span></span>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="socials d-flex justify-content-md-end justify-content-center mt-md-0 mt-4">
-                            <div class="social-icon">
-                                <a href="">
-                                    <img src="/images/yutb.png" alt="">
-                                </a>
-                            </div>
-                            <div class="social-icon ">
-                                <a href="">
-                                    <img src="/images/whats.png" alt="">
-                                </a>
-                            </div>
-                            <div class="social-icon">
-                                <a href="">
-                                    <img src="/images/linkd.png" alt="">
-                                </a>
-                            </div>
-                            <div class="social-icon">
-                                <a href="">
-                                    <img src="/images/tel.png" alt="">
-                                </a>
-                            </div>
-                            <div class="social-icon">
-                                <a href="">
-                                    <img src="/images/insta.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+       
     </main>
+    <footer class="main-footer container-fluid px-0">
+        <div class="top" onclick="scrollToTop()">
+            <img src="./images/top.png" alt="">
+        </div>
+        <div class="fix-items">
+            <a href="" class="ToolsRight">
+                  <span>مشاوره رایگان</span>
+                <img src="./images/fix-head.png" alt="">
+            </a>
+            <a href=" " class="ToolsRight">
+                  <span>سرامیک هنری</span>
+                <img src="./images/fix-2.png" alt="">
+            </a>
+            <a href="" class="ToolsRight">
+                  <span>کوره الکتریکی</span>
+                <img src="./images/fix3.png" alt="">
+            </a>
+            <a href="" class="ToolsRight">
+                  <span>آسیاها و خردکن ها</span>
+                <img src="./images/fix4.png" alt="">
+            </a>
+            <a href="" class="ToolsRight">
+                  <span>آزمایشگاه متالوگرافی</span>
+                <img src="./images/fix5.png" alt="">
+            </a>
+            <a href="" class="ToolsRight">
+                  <span>آزمایشگاه ماسه</span>
+                <img src="./images/fix6.png" alt="">
+            </a>
+        </div>
+        <div class="fix-call">
+            <img src="./images/fix-call.png" alt="">
+        </div>
+        <div class="consultation-modal" id="consultationModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">
+            <i class="fa fa-times"></i>
+        </button>
+        
+        <div class="modal-header d-flex flex-column">
+            <h3>مشاوره با کارشناسان حرفه‌ای </h3>
+            <p>لطفا فرم زیر را با دقتی تکمیل نمایید تا اولین فرصت کارشناسان ما، با شما تماس خواهند گرفت</p>
+        </div>
+        
+        <form class="consultation-form">
+            <div class="form-group">
+                <label>نام و نام خانوادگی</label>
+                <input type="text" class="form-control" placeholder="نام و نام خانوادگی">
+            </div>
+            
+            <div class="form-group">
+                <label>تلفن همراه</label>
+                <input type="tel" class="form-control" placeholder="09xxxxxxxxx">
+            </div>
+            
+            <div class="form-group">
+                <label>مایل به عنوان مشاوره در یافت اطلاعات ، کدام نوع دستگاه میباشید ؟</label>
+                <select class="form-control">
+                    <option value="">انتخاب کنید</option>
+                    <option>تجهیزات آزمایشگاه ماسه</option>
+                    <option>تجهیزات آزمایشگاه متالوگرافی</option>
+                    <option>آسیاب‌ها و خردکن‌ها</option>
+                    <option>تجهیزات آزمایشگاه سرامیک</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>متایل هستید از چه طریقی با شما تماس گرفته شود ؟</label>
+                <select class="form-control">
+                    <option value="">انتخاب کنید</option>
+                    <option>تماس تلفنی</option>
+                    <option>پیامک</option>
+                    <option>واتساپ</option>
+                    <option>ایمیل</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>توضیحات : ( در صورت نیاز : در کنار زیر بصورت مختصر درج نمایید )</label>
+                <textarea class="form-control" rows="3" placeholder="توضیحات خود را بنویسید..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                ثبت درخواست مشاوره رایگان
+            </button>
+        </form>
+       
+    </div>
+</div>
+
+       <div class="row col-xl-11">
+         <div class=" footer-top text-center">
+            <div class="footer-logo">
+                <img src="./images/footer-logo.png" alt="">
+            </div>
+            <div class="social mt-4">
+                <a href="">
+                    <img src="./images/whats.png" alt="">
+                </a>
+                 <a href="">
+                    <img src="./images/ytube.png" alt="">
+                </a>
+                 <a href="">
+                    <img src="./images/telg.png" alt="">
+                </a>
+                 <a href="">
+                    <img src="./images/linkd.png" alt="">
+                </a>
+                 <a href="">
+                    <img src="./images/insta.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class=" footer-p-two mt-5 row">
+            <div class="col-lg-4">
+                <div class="footer-part mb-3 mb-lg-0">
+                    <img src="./images/tel.png" alt="">
+                    <span>۷ روز هفتــه از ســـاعت ۹ الـــــی ۲۰ </span>
+                </div>
+                  
+            </div>
+            <div class="col-lg-4">
+                <div class="footer-part mb-3 mb-lg-0">
+                    <img src="./images/headphone.png" alt="">
+                    <span>تلفن پشتیبانی : </span>
+                   <a class="me-2">860 200 36 - 031</a>
+                   <span class="mx-2 text-secondary"> | </span>
+                   <a>64 29 20 36 - 031</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                 <div class="footer-part mb-3 mb-lg-0">
+                    <img src="./images/loc.png" alt="">
+                    <span>آدرس : </span>
+                    <span class="me-2">بومهن، خیابان عسگری، کوچه اردیبهشت، پلاک 7</span>
+                </div>
+            </div>
+        </div>
+         <!-- Footer Middle -->
+        <div class=" footer-middle my-5 ps-lg-5"> 
+            <div class="footer-column">
+                <input type="checkbox" id="why-toggle" class="accordion-toggle">
+                <label for="why-toggle" class="accordion-label">
+                    <h4>سوالات متداول </h4>
+                </label>
+                <ul class="footer-links">
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                    <li><a href="#">آرشیو بلاگ</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-column">
+                <input type="checkbox" id="popular-toggle" class="accordion-toggle">
+                <label for="popular-toggle" class="accordion-label">
+                    <h4>آرشیو بلاگ</h4>
+                </label>
+                <ul class="footer-links">
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">سوالات متداول </a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                  
+                </ul>
+            </div>
+            <div class="footer-column">
+                <input type="checkbox" id="links-toggle" class="accordion-toggle">
+                <label for="links-toggle" class="accordion-label">
+                    <h4>محصولات </h4>
+                </label>
+                <ul class="footer-links">
+                    <li><a href="#">آخرین اخبار</a></li>
+                    <li><a href="#">خدمات پس از فروش</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                    
+                </ul>
+            </div>
+             <div class="footer-column">
+                <input type="checkbox" id="links-toggle" class="accordion-toggle">
+                <label for="links-toggle" class="accordion-label">
+                    <h4>محصوت </h4>
+                </label>
+                <ul class="footer-links">
+                    <li><a href="#">دانلود کاتالوگ</a></li>
+                    <li><a href="#">سوالات متداول</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                    
+                </ul>
+            </div>
+            
+           
+            
+         
+            
+          
+        </div>
+      
+       </div>
+         <div class="footer-right  container-fluid">
+           <div class="row col-xl-11 d-flex justify-content-between">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                 <p>© کلیه حقوق این سایت متعلق به <span>شرکت مهندسی صنعت سرام</span> می باشد.</p>
+            <p>All Rights Reserved | Designed by Nonegar Pardazesh</p>
+            </div>
+           </div>
+        </div>
+
+    </footer>
+    
 
 
 
 
 
-    <script src="./js/jquery.min.js"></script>
+
+
+
+
+        <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./script.js"></script>
 </body>
-
 </html>
