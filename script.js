@@ -4,13 +4,12 @@ $(document).ready(function() {
     const headerContainer = $('.header-container');
 
     
-    // ایجاد placeholder برای جلوگیری از جهش محتوا
     const placeholder = $('<div class="sticky-placeholder"></div>');
     headerContainer.after(placeholder);
     
     let isSticky = false;
     
-    // محاسبه offset برای شروع sticky
+   
     function getHeaderBottomOffset() {
         const headerTop = $('.header-top');
         const headerMiddle = $('.header-middle');
@@ -28,7 +27,7 @@ $(document).ready(function() {
         const headerBottomOffset = getHeaderBottomOffset();
         
         if (scrollTop >= headerBottomOffset) {
-            // اگر sticky نیست، sticky کن
+            
             if (!isSticky) {
                 headerBottom.addClass('sticky');
                 placeholder.addClass('active').height(headerBottom.outerHeight());
@@ -37,7 +36,7 @@ $(document).ready(function() {
 
             }
         } else {
-            // اگر به بالای صفحه برگشته، sticky را بردار
+           
             if (isSticky) {
                 headerBottom.removeClass('sticky');
                 placeholder.removeClass('active');
@@ -62,10 +61,10 @@ $(document).ready(function() {
     
     $(window).on('scroll', requestTick);
     
-    // بررسی اولیه در صورت لود شدن صفحه در وسط
+  
     handleScroll();
     
-    // مدیریت resize برای responsive بودن
+    
     $(window).on('resize', function() {
         if (isSticky) {
             placeholder.height(headerBottom.outerHeight());
@@ -114,7 +113,7 @@ $(document).ready(function() {
         $currentItem.addClass('is-animating');
       }
       
-      // کنترل ویدیوها: توقف همه ویدیوها و پخش ویدیوی اسلاید فعال
+  
       const $allVideos = $slider.find('.owl-item video');
       $allVideos.each(function() {
         this.pause();
@@ -123,7 +122,6 @@ $(document).ready(function() {
       
       const $currentVideo = $currentItem.find('video');
       if ($currentVideo.length && $currentVideo[0]) {
-        // پخش ویدیوی اسلاید فعال
         $currentVideo[0].play().catch(function(error) {
           console.log('خطا در پخش ویدیو:', error);
         });
@@ -131,18 +129,19 @@ $(document).ready(function() {
     };
 
     $slider.on('initialized.owl.carousel translated.owl.carousel', triggerBannerAnimation);
-    $slider.owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      rtl: true,
-      nav: false,
-      dots: false
-    });
+$slider.owlCarousel({
+    items: 1,
+    loop: true,
+    // autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    rtl: true,
+    nav: true,  
+    dots: false,
+    navText: ["<i class='fa fa-chevron-right'></i>", "<i class='fa fa-chevron-left'></i>"]   
+});
     
-    // وقتی ویدیو تمام شد، دوباره از اول پخش شود
+    
     $slider.find('video').each(function() {
       $(this).on('ended', function() {
         this.currentTime = 0;
@@ -153,19 +152,23 @@ $(document).ready(function() {
     });
   }
 
-  $('.most-sale-owl').owlCarousel({
+
+$('.most-sale-owl').owlCarousel({
     rtl: true,
     loop: true,
-    nav: false,
+    nav: true,
     dots: false,
     autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     smartSpeed: 1000,
-    navText: ["<i class='fa fa-chevron-right'></i>", "<i class='fa fa-chevron-left'></i>"],
+    navText: [
+        '<img src="./images/right.png" alt="قبلی" class="nav-arrow nav-arrow-prev">',
+        '<img src="./images/left.png" alt="بعدی" class="nav-arrow nav-arrow-next">'
+    ],
     responsive: {
       0: {
-        items: 1.5
+        items: 1.3
       },
       600: {
         items: 2.5
@@ -180,7 +183,7 @@ $(document).ready(function() {
         items: 4
       }
     }
-  });
+});
    const $creativitySection = $('.creativity');
   if ($creativitySection.length) {
     if ('IntersectionObserver' in window) {
@@ -205,7 +208,6 @@ $(document).ready(function() {
   
 // Advanced Mega Menu with Touch Support
 $(document).ready(function() {
-    // Handle mobile touch for mega menu
     if (window.innerWidth <= 992) {
         $('.has-mega-advanced > .nav-link').on('click', function(e) {
             e.preventDefault();
@@ -218,7 +220,6 @@ $(document).ready(function() {
         });
     }
     
-    // Close mega menu when clicking outside
     $(document).on('click', function(e) {
         if (!$(e.target).closest('.has-mega-advanced').length) {
             $('.has-mega-advanced').removeClass('mobile-active');
@@ -226,7 +227,6 @@ $(document).ready(function() {
         }
     });
     
-    // Add smooth scroll animation for submenu items
     $('.mega-submenu a').hover(
         function() {
             $(this).stop().animate({
@@ -263,7 +263,6 @@ $(document).ready(function() {
             }
         });
         
-        // Optional: Pause on scroll out of view
         $(window).on('scroll', function() {
             const videoTop = $video.offset().top;
             const videoBottom = videoTop + $video.height();
@@ -554,4 +553,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
         item.addEventListener('mouseleave', clearActive);
     });
+});
+      // News Section Animation - From Bottom to Top
+const $newsSection = $('.news');
+if ($newsSection.length) {
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    $(entry.target).addClass('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -10% 0px'
+        });
+
+        observer.observe($newsSection[0]);
+    } else {
+        $newsSection.addClass('is-visible');
+    }
+}
+document.addEventListener('DOMContentLoaded', function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+});
+$(document).ready(function() {
+    const languageDropdown = $('.language-dropdown');
+    const languageToggle = $('.language-toggle');
+    const langOptions = $('.lang-option');
+    
+    languageToggle.on('click', function(e) {
+        e.stopPropagation();
+        languageDropdown.toggleClass('open');
+    });
+    
+    langOptions.on('click', function() {
+        const lang = $(this).data('lang');
+        const langText = $(this).find('span').text();
+        const langFlag = $(this).find('img').attr('src');
+        
+        $('.lang-flag').attr('src', langFlag);
+        $('.lang-name').text(langText);
+        
+        langOptions.removeClass('active');
+        $(this).addClass('active');
+        
+        languageDropdown.removeClass('open');
+        
+        if (lang === 'en') {
+            $('html').attr('lang', 'en').attr('dir', 'ltr');
+            document.documentElement.style.direction = 'ltr';
+        } else {
+            $('html').attr('lang', 'fa').attr('dir', 'rtl');
+            document.documentElement.style.direction = 'rtl';
+        }
+        
+        localStorage.setItem('selectedLanguage', lang);
+    });
+    
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.language-dropdown').length) {
+            languageDropdown.removeClass('open');
+        }
+    });
+    
+    const savedLang = localStorage.getItem('selectedLanguage') || 'fa';
+    if (savedLang === 'en') {
+        $(`.lang-option[data-lang="en"]`).click();
+    }
 });
